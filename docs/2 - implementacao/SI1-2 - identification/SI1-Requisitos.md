@@ -1,30 +1,55 @@
 # SI1 - Requisitos do Sistema
+**Projeto:** dgp.cnqp_lib
+**Versão:** v0.1.0
+**Tipo:** Biblioteca Python
 
-## 1. Introdução
-Este documento define os requisitos para a biblioteca de extração de dados do Espelho de Grupos de Pesquisa do CNPq (`dgp_cnpq_lib`).
+---
 
-## 2. Requisitos Funcionais
+# 1. Introdução
+Este documento define os requisitos técnicos e funcionais para a biblioteca `dgp_cnpq_lib`, responsável pela extração automatizada de dados públicos do Espelho de Grupo de Pesquisa do CNPq.
 
-### RF-01: Extração de Dados de Grupo
-- **Descrição**: O sistema deve extrair dados estruturados de uma página pública do Espelho de Grupo de Pesquisa.
-- **Entrada**: URL da página do grupo.
-- **Saída**: Dicionário de dados ou Arquivo JSON.
+---
 
-### RF-02: Saída JSON Padronizada
-- **Descrição**: O sistema deve salvar os dados extraídos em um arquivo JSON.
-- **Regra**: O nome do arquivo deve ser baseado no nome do grupo (ex: `grupo_x.json`).
+# 2. Requisitos Funcionais (RF)
 
-### RF-03: Extração de Metadados
-- **Descrição**: O sistema deve identificar e extrair:
-    - Nome do Grupo.
-    - Líderes.
+### RF-01: Extração de Dados Completos
+- **Descrição**: O sistema deve extrair todos os dados visíveis nos fieldsets da página do grupo.
+- **Entrada**: URL pública do espelho (ex: `dgp.cnpq.br/espelhogrupo/...`).
+- **Saída**: Dicionário aninhado contendo:
+    - Identificação e Liderança.
+    - Áreas de especialidade.
+    - Recursos Humanos (Estudantes, Técnicos, Pesquisadores).
     - Linhas de Pesquisa.
-    - Recursos Humanos (Estudantes, Pesquisadores).
 
-## 3. Requisitos Não Funcionais
+### RF-02: Interface de Linha de Comando (CLI)
+- **Descrição**: A biblioteca deve fornecer uma CLI executável via `python -m dgp_cnpq_lib <url>`.
+- **Ação**: Ao executar, deve extrair os dados e salvar em disco.
+- **Saída**: Feedback no `stdout` ("Navigating to...", "Data saved to...").
 
-### RNF-01: Dependências
-- **Descrição**: O sistema deve utilizar `playwright` para navegação e renderização de JavaScript.
+### RF-03: Persistência em JSON
+- **Descrição**: Os dados extraídos devem ser salvos em arquivos JSON.
+- **Formato**: Nome do arquivo deve ser sanitizado baseado no nome do grupo (ex: `grupo_de_pesquisa_em_ia.json`).
 
-### RNF-02: Arquitetura
-- **Descrição**: O sistema deve seguir o paradigma Orientado a Objetos (OO).
+### RF-04: Parsing de Tabelas Dinâmicas
+- **Descrição**: O sistema deve identificar tabelas HTML dentro dos fieldsets e convertê-las para listas de objetos JSON.
+- **Detalhe**: Deve tratar colunas como chaves (normalizadas para `snake_case`) e linhas como valores.
+
+---
+
+# 3. Requisitos Não Funcionais (RNF)
+
+### RNF-01: Stack Tecnológica
+- **Linguagem**: Python 3.8+
+- **Engine**: Playwright (para renderização de JS e navegação).
+- **Packaging**: `hatchling` (backend de build).
+
+### RNF-02: Arquitetura Orientada a Objetos
+- **Padrão**: O código deve ser organizado em classes com responsabilidades únicas (`Extractor`, `Parser`, `Crawler`).
+- **Extensibilidade**: Facilidade para adicionar novos tipos de extratores sem modificar o crawler principal.
+
+### RNF-03: Qualidade de Código
+- **Linting**: O código deve passar, sem erros, por:
+    - `black` (formatação, line-length 100).
+    - `flake8` (estilo).
+    - `isort` (imports).
+- **Testes**: Cobertura de testes unitários (`pytest`) para os parsers.
