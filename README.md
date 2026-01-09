@@ -1,56 +1,34 @@
-# DGP CNPq Lib
+# dgp_cnpq_lib
 
-Uma biblioteca Python para extrair dados estruturados (JSON) de páginas de "Espelho de Grupo de Pesquisa" do CNPq.
+**Biblioteca Python para extração de dados do Espelho de Grupos de Pesquisa do CNPq.**
 
-Este projeto utiliza [Playwright](https://playwright.dev/) para navegar e extrair dados dinâmicos.
+## 📖 Visão Geral
+`dgp_cnpq_lib` é uma biblioteca utilitária que extrai dados estruturados de páginas do [Espelho de Grupos de Pesquisa do CNPq](http://dgp.cnpq.br/) e os retorna em formato JSON. Ideal para integração com sistemas ETL e bases de dados institucionais.
 
-## Funcionalidades
-
-- Extração completa de dados do grupo (Identificação, Endereço, Linhas de Pesquisa, RH, etc.)
-- Tratamento automático de datas (início/fim)
-- Saída em JSON normalizado e limpo
-
-## Instalação
-
+## 🚀 Instalação
 ```bash
 pip install .
-# Ou instale as dependências manualmente
-pip install playwright
-playwright install chromium
 ```
 
-## Como Usar
-
-### Como Biblioteca
-
-```python
-from dgp_cnpq_lib.crawler import crawl_cnpq_group
-import json
-
-url = "http://dgp.cnpq.br/dgp/espelhogrupo/4201359100034312"
-data = crawl_cnpq_group(url)
-
-print(json.dumps(data, indent=2, ensure_ascii=False))
-```
-
-### Script Standalone
-
-Você também pode rodar o módulo diretamente se estiver na raiz do projeto:
-
+## 💻 Uso
 ```bash
-python -m src.dgp_cnpq_lib.crawler
+python -m dgp_cnpq_lib http://dgp.cnpq.br/dgp/espelhogrupo/<id>
 ```
-(Certifique-se de ajustar o script para aceitar argumentos via linha de comando se desejar mais flexibilidade).
 
-## Estrutura do Projeto
+**Saída**: Arquivo JSON nomeado dinamicamente após o grupo (ex: `grupo_de_inteligencia_artificial.json`).
 
-- `src/dgp_cnpq_lib`: Código fonte da biblioteca.
-- `setup.py`: Configuração de instalação.
+## 🏗️ Arquitetura
+- **`core.py`**: `CnpqCrawler` - Orquestra a navegação (Playwright).
+- **`extractors.py`**: Classes OO para parsing (BaseExtractor, TableExtractor, FieldsetParser).
+- **`__main__.py`**: Interface CLI.
 
-## Contribuindo
+## 🧪 Testes
+```bash
+pytest tests/
+```
 
-1. Fork o projeto
-2. Crie uma branch (`git checkout -b feature/nova-feature`)
-3. Commit suas mudanças (`git commit -am 'Adiciona nova feature'`)
-4. Push para a branch (`git push origin feature/nova-feature`)
-5. Abra um Pull Request
+## 📂 Documentação Completa
+Veja [`docs/README.md`](docs/README.md) para a estrutura completa de governança e design.
+
+## 📜 Licença
+MIT
