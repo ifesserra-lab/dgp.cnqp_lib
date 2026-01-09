@@ -1,13 +1,13 @@
 # Project Backlog - DGP CNPq Library
 
-This document is automatically synchronized with GitHub Issues. Last updated: 2026-01-09 16:37:19
+This document is automatically synchronized with GitHub Issues. Last updated: 2026-01-09 15:21:48
 
 ## 📋 Master Issue List
 Overview of all demands, their states and executors.
 
 | # | Status | Title | Executor | Sprint | Milestone |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| [# 32](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/32) | 🟢 | Update Agile Standards: CI/CD Monitoring Enforcement | - | - | - |
+| [# 32](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/32) | ✅ | Update Agile Standards: CI/CD Monitoring Enforcement | - | - | - |
 | [# 29](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/29) | 🟢 | fix: project-wide code style compliance | - | - | - |
 | [# 27](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/27) | 🟢 | fix: isort error in __main__.py | - | - | - |
 | [# 25](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/25) | 🟢 | Update Agile Standards: Strict Linting Enforcement | - | - | - |
@@ -19,8 +19,8 @@ Overview of all demands, their states and executors.
 | [# 12](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/12) | ✅ | Release v0.2.0 Preparation | - | - | - |
 | [# 10](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/10) | ✅ | Task: Create demo.py usage example | - | - | - |
 | [# 8](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/8) | ✅ | US-005: Custom Output Path CLI Argument | - | - | - |
-| [# 6](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/6) | 🟢 | US-004: Logging Estruturado | - | - | - |
-| [# 5](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/5) | 🟢 | US-003: Tratamento de Erros e Retries | - | - | - |
+| [# 6](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/6) | ✅ | US-004: Logging Estruturado | - | - | - |
+| [# 5](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/5) | ✅ | US-003: Tratamento de Erros e Retries | - | - | - |
 | [# 2](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/2) | ✅ | feat: Modernize project structure with pyproject.toml and CI improvements | @paulossjunior | - | - |
 | [# 1](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/1) | ✅ | feat: Update Documentation and Implement Test Suite | @paulossjunior | - | - |
 
@@ -29,22 +29,22 @@ Overview of all demands, their states and executors.
 ## 📂 Workflow States
 
 ### 🟢 In Progress / Todo
-- [#32](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/32) **Update Agile Standards: CI/CD Monitoring Enforcement**
 - [#29](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/29) **fix: project-wide code style compliance**
 - [#27](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/27) **fix: isort error in __main__.py**
 - [#25](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/25) **Update Agile Standards: Strict Linting Enforcement**
 - [#23](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/23) **fix: linting error in __main__.py**
 - [#16](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/16) **Update Backlog - Remove SigPesq References**
 - [#14](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/14) **Refactor Package Exports**
-- [#6](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/6) **US-004: Logging Estruturado**
-- [#5](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/5) **US-003: Tratamento de Erros e Retries**
 
 ### ✅ Done / Released
+- [#32](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/32) **Update Agile Standards: CI/CD Monitoring Enforcement**
 - [#20](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/20) **Add maintenance scripts**
 - [#18](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/18) **Release v0.3.0**
 - [#12](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/12) **Release v0.2.0 Preparation**
 - [#10](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/10) **Task: Create demo.py usage example**
 - [#8](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/8) **US-005: Custom Output Path CLI Argument**
+- [#6](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/6) **US-004: Logging Estruturado**
+- [#5](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/5) **US-003: Tratamento de Erros e Retries**
 - [#2](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/2) **feat: Modernize project structure with pyproject.toml and CI improvements**
 - [#1](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/1) **feat: Update Documentation and Implement Test Suite**
 
@@ -52,7 +52,7 @@ Overview of all demands, their states and executors.
 
 ## 📝 Detailed Backlog
 
-### [OPEN] [#32](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/32) Update Agile Standards: CI/CD Monitoring Enforcement
+### [CLOSED] [#32](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/32) Update Agile Standards: CI/CD Monitoring Enforcement
 - **Executor**: -
 - **Labels**: documentation, standards
 - **Milestone**: -
@@ -264,7 +264,7 @@ Technical Proposal for Release v0.2.0 Preparation.
 
 ---
 
-### [OPEN] [#6](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/6) US-004: Logging Estruturado
+### [CLOSED] [#6](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/6) US-004: Logging Estruturado
 - **Executor**: -
 - **Labels**: enhancement, US
 - **Milestone**: -
@@ -284,7 +284,7 @@ Technical Proposal for Release v0.2.0 Preparation.
 
 ---
 
-### [OPEN] [#5](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/5) US-003: Tratamento de Erros e Retries
+### [CLOSED] [#5](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/5) US-003: Tratamento de Erros e Retries
 - **Executor**: -
 - **Labels**: enhancement, US
 - **Milestone**: -
