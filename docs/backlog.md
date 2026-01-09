@@ -1,6 +1,6 @@
 # Project Backlog - DGP CNPq Library
 
-This document is automatically synchronized with GitHub Issues. Last updated: 2026-01-09 18:21:44
+This document is automatically synchronized with GitHub Issues. Last updated: 2026-01-09 18:24:16
 
 ## 📋 Master Issue List
 Overview of all demands, their states and executors.
@@ -8,10 +8,10 @@ Overview of all demands, their states and executors.
 | # | Status | Title | Executor | Sprint | Milestone |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | [# 32](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/32) | ✅ | Update Agile Standards: CI/CD Monitoring Enforcement | - | - | - |
-| [# 29](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/29) | 🟢 | fix: project-wide code style compliance | - | - | - |
-| [# 27](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/27) | 🟢 | fix: isort error in __main__.py | - | - | - |
-| [# 25](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/25) | 🟢 | Update Agile Standards: Strict Linting Enforcement | - | - | - |
-| [# 23](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/23) | 🟢 | fix: linting error in __main__.py | - | - | - |
+| [# 29](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/29) | ✅ | fix: project-wide code style compliance | - | - | - |
+| [# 27](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/27) | ✅ | fix: isort error in __main__.py | - | - | - |
+| [# 25](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/25) | ✅ | Update Agile Standards: Strict Linting Enforcement | - | - | - |
+| [# 23](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/23) | ✅ | fix: linting error in __main__.py | - | - | - |
 | [# 20](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/20) | ✅ | Add maintenance scripts | - | - | - |
 | [# 18](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/18) | ✅ | Release v0.3.0 | - | - | - |
 | [# 16](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/16) | 🟢 | Update Backlog - Remove SigPesq References | - | - | - |
@@ -29,15 +29,15 @@ Overview of all demands, their states and executors.
 ## 📂 Workflow States
 
 ### 🟢 In Progress / Todo
-- [#29](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/29) **fix: project-wide code style compliance**
-- [#27](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/27) **fix: isort error in __main__.py**
-- [#25](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/25) **Update Agile Standards: Strict Linting Enforcement**
-- [#23](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/23) **fix: linting error in __main__.py**
 - [#16](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/16) **Update Backlog - Remove SigPesq References**
 - [#14](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/14) **Refactor Package Exports**
 
 ### ✅ Done / Released
 - [#32](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/32) **Update Agile Standards: CI/CD Monitoring Enforcement**
+- [#29](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/29) **fix: project-wide code style compliance**
+- [#27](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/27) **fix: isort error in __main__.py**
+- [#25](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/25) **Update Agile Standards: Strict Linting Enforcement**
+- [#23](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/23) **fix: linting error in __main__.py**
 - [#20](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/20) **Add maintenance scripts**
 - [#18](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/18) **Release v0.3.0**
 - [#12](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/12) **Release v0.2.0 Preparation**
@@ -69,7 +69,7 @@ Update `agile-standards.md` to include mandatory monitoring of GitHub Actions.
 
 ---
 
-### [OPEN] [#29](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/29) fix: project-wide code style compliance
+### [CLOSED] [#29](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/29) fix: project-wide code style compliance
 - **Executor**: -
 - **Labels**: maintenance, style
 - **Milestone**: -
@@ -83,7 +83,7 @@ Ensure all project files (including `demo.py` and `scripts/`) follow the code st
 
 ---
 
-### [OPEN] [#27](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/27) fix: isort error in __main__.py
+### [CLOSED] [#27](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/27) fix: isort error in __main__.py
 - **Executor**: -
 - **Labels**: bug, linting
 - **Milestone**: -
@@ -99,7 +99,7 @@ Run `isort` on the file to correct import order.
 
 ---
 
-### [OPEN] [#25](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/25) Update Agile Standards: Strict Linting Enforcement
+### [CLOSED] [#25](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/25) Update Agile Standards: Strict Linting Enforcement
 - **Executor**: -
 - **Labels**: documentation, standards
 - **Milestone**: -
@@ -116,7 +116,7 @@ Update `agile-standards.md` to enforce strict linting rules.
 
 ---
 
-### [OPEN] [#23](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/23) fix: linting error in __main__.py
+### [CLOSED] [#23](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/23) fix: linting error in __main__.py
 - **Executor**: -
 - **Labels**: bug, linting
 - **Milestone**: -
