@@ -1,12 +1,13 @@
 # Project Backlog - DGP CNPq Library
 
-This document is automatically synchronized with GitHub Issues. Last updated: 2026-01-09 16:26:40
+This document is automatically synchronized with GitHub Issues. Last updated: 2026-01-09 16:28:59
 
 ## 📋 Master Issue List
 Overview of all demands, their states and executors.
 
 | # | Status | Title | Executor | Sprint | Milestone |
 | :--- | :--- | :--- | :--- | :--- | :--- |
+| [# 27](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/27) | 🟢 | fix: isort error in __main__.py | - | - | - |
 | [# 25](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/25) | 🟢 | Update Agile Standards: Strict Linting Enforcement | - | - | - |
 | [# 23](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/23) | 🟢 | fix: linting error in __main__.py | - | - | - |
 | [# 20](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/20) | ✅ | Add maintenance scripts | - | - | - |
@@ -26,6 +27,7 @@ Overview of all demands, their states and executors.
 ## 📂 Workflow States
 
 ### 🟢 In Progress / Todo
+- [#27](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/27) **fix: isort error in __main__.py**
 - [#25](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/25) **Update Agile Standards: Strict Linting Enforcement**
 - [#23](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/23) **fix: linting error in __main__.py**
 - [#16](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/16) **Update Backlog - Remove SigPesq References**
@@ -45,6 +47,22 @@ Overview of all demands, their states and executors.
 ---
 
 ## 📝 Detailed Backlog
+
+### [OPEN] [#27](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/27) fix: isort error in __main__.py
+- **Executor**: -
+- **Labels**: bug, linting
+- **Milestone**: -
+
+**Description**:
+Fix import sorting error in `src/dgp_cnpq_lib/__main__.py`.
+
+**Error**:
+`isort` check failed in CI.
+
+**Action**:
+Run `isort` on the file to correct import order.
+
+---
 
 ### [OPEN] [#25](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/25) Update Agile Standards: Strict Linting Enforcement
 - **Executor**: -
