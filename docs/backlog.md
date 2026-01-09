@@ -1,12 +1,13 @@
 # Project Backlog - DGP CNPq Library
 
-This document is automatically synchronized with GitHub Issues. Last updated: 2026-01-09 16:21:24
+This document is automatically synchronized with GitHub Issues. Last updated: 2026-01-09 16:26:40
 
 ## 📋 Master Issue List
 Overview of all demands, their states and executors.
 
 | # | Status | Title | Executor | Sprint | Milestone |
 | :--- | :--- | :--- | :--- | :--- | :--- |
+| [# 25](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/25) | 🟢 | Update Agile Standards: Strict Linting Enforcement | - | - | - |
 | [# 23](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/23) | 🟢 | fix: linting error in __main__.py | - | - | - |
 | [# 20](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/20) | ✅ | Add maintenance scripts | - | - | - |
 | [# 18](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/18) | ✅ | Release v0.3.0 | - | - | - |
@@ -25,6 +26,7 @@ Overview of all demands, their states and executors.
 ## 📂 Workflow States
 
 ### 🟢 In Progress / Todo
+- [#25](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/25) **Update Agile Standards: Strict Linting Enforcement**
 - [#23](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/23) **fix: linting error in __main__.py**
 - [#16](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/16) **Update Backlog - Remove SigPesq References**
 - [#14](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/14) **Refactor Package Exports**
@@ -43,6 +45,23 @@ Overview of all demands, their states and executors.
 ---
 
 ## 📝 Detailed Backlog
+
+### [OPEN] [#25](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/25) Update Agile Standards: Strict Linting Enforcement
+- **Executor**: -
+- **Labels**: documentation, standards
+- **Milestone**: -
+
+**Description**:
+Update `agile-standards.md` to enforce strict linting rules.
+
+**Requirement**:
+- Linting (`black`, `isort`, etc.) must pass BEFORE any commit.
+- This is MANDATORY and NON-NEGOTIABLE.
+
+**Changes**:
+- Update `.agent/workflows/agile-standards.md` section 5.
+
+---
 
 ### [OPEN] [#23](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/23) fix: linting error in __main__.py
 - **Executor**: -
