@@ -1,38 +1,250 @@
-# General Project Backlog
+# Project Backlog - DGP CNPq Library
 
-**Central Tracking for Releases and Work Items**
+This document is automatically synchronized with GitHub Issues. Last updated: 2026-01-09 16:20:20
 
-## 1. Releases Log
-Tracks the delivery of versions to production (Main Branch).
+## 📋 Master Issue List
+Overview of all demands, their states and executors.
 
-| Version | Date | Status | Description | PR / Commit |
-|---------|------|--------|-------------|-------------|
-| **v0.3.1** | 2026-01-09 | Released | Maintenance Scripts | PR #22 |
-| **v0.3.0** | 2026-01-09 | Released | ResearcherID & Granular Strategy Pattern | PR #19 |
-| **v0.2.0** | 2026-01-09 | Released | Output Path Feature & Documentation Updates | [PR #12](https://github.com/ifesserra-lab/dgp.cnqp_lib/pull/12) |
-| **v0.1.0** | 2026-01-09 | Released | OO Architecture Refactor & Modernization | [PR #3](https://github.com/ifesserra-lab/dgp.cnqp_lib/pull/3) / [4dadb7a](https://github.com/ifesserra-lab/dgp.cnqp_lib/commit/4dadb7a14776411a00ff8e2968fd2a0cb47e69db) |
-| **v0.0.0** | 2026-01-01 | Released | Project Initiation | - |
+| # | Status | Title | Executor | Sprint | Milestone |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| [# 20](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/20) | ✅ | Add maintenance scripts | - | - | - |
+| [# 18](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/18) | ✅ | Release v0.3.0 | - | - | - |
+| [# 16](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/16) | 🟢 | Update Backlog - Remove SigPesq References | - | - | - |
+| [# 14](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/14) | 🟢 | Refactor Package Exports | - | - | - |
+| [# 12](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/12) | ✅ | Release v0.2.0 Preparation | - | - | - |
+| [# 10](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/10) | ✅ | Task: Create demo.py usage example | - | - | - |
+| [# 8](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/8) | ✅ | US-005: Custom Output Path CLI Argument | - | - | - |
+| [# 6](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/6) | 🟢 | US-004: Logging Estruturado | - | - | - |
+| [# 5](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/5) | 🟢 | US-003: Tratamento de Erros e Retries | - | - | - |
+| [# 2](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/2) | ✅ | feat: Modernize project structure with pyproject.toml and CI improvements | @paulossjunior | - | - |
+| [# 1](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/1) | ✅ | feat: Update Documentation and Implement Test Suite | @paulossjunior | - | - |
 
-## 2. In Progress Items (Current Sprint)
-Reflecting active work from `SI.3 Product Backlog`.
+---
 
-- **CNPq Crawler Library**
-    - [x] Issue #1 [Update Documentation and Implement Test Suite](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/1) ([PR #3](https://github.com/ifesserra-lab/dgp.cnqp_lib/pull/3) - Merged)
-    - [x] Issue #2 [Modernize project structure with pyproject.toml](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/2) ([PR #3](https://github.com/ifesserra-lab/dgp.cnqp_lib/pull/3) - Merged)
+## 📂 Workflow States
 
-- **Epic 3: Dados de Execução FAPES (Release 3)**
-    - [ ] US-006 [Extração de Editais FAPES (PDF)](https://github.com/ifesserra-lab/horizon_etl/issues/1)
+### 🟢 In Progress / Todo
+- [#16](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/16) **Update Backlog - Remove SigPesq References**
+- [#14](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/14) **Refactor Package Exports**
+- [#6](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/6) **US-004: Logging Estruturado**
+- [#5](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/5) **US-003: Tratamento de Erros e Retries**
 
-## 3. Hierarchical Status
-Mapping Epics -> User Stories -> Tasks status.
+### ✅ Done / Released
+- [#20](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/20) **Add maintenance scripts**
+- [#18](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/18) **Release v0.3.0**
+- [#12](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/12) **Release v0.2.0 Preparation**
+- [#10](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/10) **Task: Create demo.py usage example**
+- [#8](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/8) **US-005: Custom Output Path CLI Argument**
+- [#2](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/2) **feat: Modernize project structure with pyproject.toml and CI improvements**
+- [#1](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/1) **feat: Update Documentation and Implement Test Suite**
 
-### CNPq Crawler Library
-- **Issue #1**: Done (Merged via PR #3)
-- **Issue #2**: Done (Merged via PR #3)
+---
 
-### R3 - SigFapes
-- **US-006**: Ready
-    - T-006 [Dev] Scraper: Pending
-    - T-007 [Dev] Parser: Pending
-    - T-008 [Dev] Matcher: Pending
-    - T-009 [Ops] Flow: Pending
+## 📝 Detailed Backlog
+
+### [CLOSED] [#20](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/20) Add maintenance scripts
+- **Executor**: -
+- **Labels**: maintenance, tooling
+- **Milestone**: -
+
+**Description**:
+Add maintenance scripts to the repository.
+
+**Scripts**:
+- `scripts/bump_version.py`
+- `scripts/sync_backlog.py`
+
+**Objective**:
+Share local maintenance/automation scripts via version control.
+
+---
+
+### [CLOSED] [#18](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/18) Release v0.3.0
+- **Executor**: -
+- **Labels**: release
+- **Milestone**: -
+
+**Description**:
+Release v0.3.0
+
+**Contents**:
+- Refactor: Package exports (`__init__.py`).
+- Docs: Backlog cleanup.
+
+**Actions**:
+- Update backlog date.
+- Merge `developing` -> `main`.
+- Tag `v0.3.0`.
+
+---
+
+### [OPEN] [#16](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/16) Update Backlog - Remove SigPesq References
+- **Executor**: -
+- **Labels**: documentation, cleanup
+- **Milestone**: -
+
+**Description**:
+Update `docs/backlog.md` to remove incorrect references to "SigPesq".
+
+**Objective**: Ensure backlog reflects accurate project scope (User indicated SigPesq is not used).
+
+**Tasks**:
+- Remove/Update "SigPesq Enhancements" entry in `docs/backlog.md`.
+
+---
+
+### [OPEN] [#14](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/14) Refactor Package Exports
+- **Executor**: -
+- **Labels**: refactor
+- **Milestone**: -
+
+**Description**:
+Refactor `__init__.py` to export key classes.
+
+**Objective**: Simplify import paths for the library.
+
+**Tasks**:
+- Export `CnpqCrawler` from `dgp_cnpq_lib.core`.
+- Export `BaseExtractor`, `TableExtractor`, `FieldsetParser` from `dgp_cnpq_lib.extractors`.
+- Update `demo.py` to use the new imports.
+
+**Acceptance Criteria**:
+- `from dgp_cnpq_lib import CnpqCrawler` works.
+- `demo.py` runs successfully.
+
+---
+
+### [CLOSED] [#12](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/12) Release v0.2.0 Preparation
+- **Executor**: -
+- **Labels**: task
+- **Milestone**: -
+
+**Description**:
+Technical Proposal for Release v0.2.0 Preparation.
+
+**Objective**: Prepare the project for the v0.2.0 release, incorporating the new Output Path feature (US-005) and updating documentation.
+
+**Tasks**:
+- Update `README.md` with a new "Python Usage" section.
+- Update `docs/backlog.md` to reflect the v0.2.0 release status.
+- Create the Release PR (`developing` -> `main`).
+
+**Note**: `pyproject.toml` version bump will be handled by the CI/CD pipeline upon tagging (Workflow: `/bump-version`).
+
+---
+
+### [CLOSED] [#10](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/10) Task: Create demo.py usage example
+- **Executor**: -
+- **Labels**: documentation, task
+- **Milestone**: -
+
+**Description**:
+**Objective**: Create a `demo.py` script in the root directory (or examples/) to demonstrate how to programmatically use the `dgp_cnpq_lib`.
+
+### Acceptance Criteria
+- [ ] Create `demo.py`.
+- [ ] Showcase importing `CnpqCrawler`.
+- [ ] Showcase configuring the logger.
+- [ ] Showcase extracting data and printing/saving it.
+- [ ] Script must run successfully.
+
+### Technical Notes
+- Keep it simple and commented.
+
+
+---
+
+### [CLOSED] [#8](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/8) US-005: Custom Output Path CLI Argument
+- **Executor**: -
+- **Labels**: enhancement, US
+- **Milestone**: -
+
+**Description**:
+**Objective**: Allow users to specify the output filename/path via a CLI argument.
+
+### Acceptance Criteria
+- [ ] Add `--output` (or `-o`) argument to `__main__.py`.
+- [ ] If provided, use this path for saving the JSON.
+- [ ] If not provided, fall back to the existing behavior (group name sanitize).
+- [ ] Ensure the directory exists or display a clear error if not.
+
+### Technical Notes
+- Use `argparse`.
+
+
+---
+
+### [OPEN] [#6](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/6) US-004: Logging Estruturado
+- **Executor**: -
+- **Labels**: enhancement, US
+- **Milestone**: -
+
+**Description**:
+**Objective**: Enable observability via structured JSON logs instead of `print()`.
+
+### Acceptance Criteria
+- [ ] Add `loguru` dependency.
+- [ ] Configure `logger.py` to output JSON to `stderr`.
+- [ ] Replace all `print()` calls in `core.py` and `__main__.py` with proper logging levels (`info`, `error`, `debug`).
+- [ ] Add CLI flag `--verbose` to control log level.
+
+### Technical Notes
+- Use `loguru` for simplicity and powerful serialization.
+
+
+---
+
+### [OPEN] [#5](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/5) US-003: Tratamento de Erros e Retries
+- **Executor**: -
+- **Labels**: enhancement, US
+- **Milestone**: -
+
+**Description**:
+**Objective**: Prevent transient failures (network blips, timeouts) from crashing the crawler logic.
+
+### Acceptance Criteria
+- [ ] Add `tenacity` dependency.
+- [ ] Implement `@retry_handler` decorator with specific exception catching (`PlaywrightTimeoutError` etc.).
+- [ ] Apply retry logic to critical navigation methods in `CnpqCrawler`.
+- [ ] Add safeguards to `extractors.py` to prevent crashes on missing DOM elements.
+
+### Technical Notes
+- Policy: Exponential backoff (1s, 2s, 4s...) up to 3 attempts.
+
+
+---
+
+### [CLOSED] [#2](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/2) feat: Modernize project structure with pyproject.toml and CI improvements
+- **Executor**: paulossjunior
+- **Labels**: task, infrastructure
+- **Milestone**: -
+
+**Description**:
+**Objective**: Migrate to modern Python packaging (`pyproject.toml`), add explicit requirements files, and enhance CI/CD workflows with linting.
+
+**Acceptance Criteria**:
+- `pyproject.toml` replaces `setup.py`
+- `requirements.txt` and `requirements-dev.txt` created
+- CI workflow includes linting checks (black, flake8, isort)
+- Playwright installation added to CI
+- PR template updated with OO Compliance checklist
+- All tests and linting pass
+
+
+---
+
+### [CLOSED] [#1](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/1) feat: Update Documentation and Implement Test Suite
+- **Executor**: paulossjunior
+- **Labels**: documentation, task, tests
+- **Milestone**: -
+
+**Description**:
+**Objective**: Update SI1 and SI2 documents to reflect the new OO Crawler Library architecture and implement a comprehensive `pytest` suite.
+**Acceptance Criteria**:
+- `docs/..SI1-Requisitos.md` updated to crawler context.
+- `docs/..SI2-Analise.md` updated to OO architecture.
+- `tests/` populated with `conftest.py`, `test_extractors.py`, `test_crawler.py`.
+- All tests pass.
+
+
+---
