@@ -1,58 +1,44 @@
-# Status Report 1
-**Projeto:** Horizon ETL  
-**Período:** 01/01/2026 a 15/01/2026  
-**Versão:** 1.0  
-**Responsável pelo Relato:** Antigravity (Senior Lead)
+# Status Report 1: Release v0.1.0
+**Projeto:** dgp.cnqp_lib
+**Período:** 06/01/2026 a 09/01/2026
+**Versão:** v0.1.0
+**Responsável pelo Relato:** Antigravity (Senior PM)
 
 ---
 
-## 1. Resumo Executivo
-O projeto concluiu a **Mecanismo de Ingestão do SigPesq (US-001 e US-007)** e a infraestrutura de orquestração local. Recentemente, foi implementado o **Padrão de Estratégia Granular** para o `ResearchGroupLoader`, melhorando a extensibilidade. O ambiente está estável com Prefect 3 rodando em Docker, e a versão **v0.3.0** foi liberada no branch `main`.
+# 1. Resumo Executivo
+A Release v0.1.0 foi entregue com sucesso, atingindo todos os objetivos de modernização e funcionalidade básica. O projeto foi refatorado para uma arquitetura Orientada a Objetos, migrado para `pyproject.toml` e conta agora com uma suíte de testes robusta e CI/CD configurado.
 
 ---
 
-## 2. Progresso da Sprint / Iteração
+# 2. Progresso (Sprints 1-3)
 | Item | Previsto | Concluído | Observações |
 |------|----------|-----------|-------------|
-| **US-001** (Extract SigPesq) | Sim | Sim | Concluído. |
-| **US-007** (Ingestão Grupos Pesquisa) | Sim | Sim | Integrado com Knowledge Areas e cnpq_url (PR #4). |
-| **US-005** (Observability) | Sim | Sim | Logs e estrutura base implementadas. |
-| **US-006** (Fapes API) | Não | Não | Agendado para R3. |
+| Refatoração OO | Sim | Sim | Classes `BaseExtractor`, `CnpqCrawler` |
+| Modernização Packaging | Sim | Sim | `pyproject.toml`, `requirements.txt` |
+| Testes Automatizados | Sim | Sim | 100% pass (6 testes) |
+| CI/CD Pipeline | Sim | Sim | Linting + Tests + Release Auto |
+| Documentação | Sim | Sim | Atualização completa de `docs/` |
 
 ---
 
-## 3. Entregáveis desde o Último Relato
-- `src/core/logic/research_group_loader.py`: Ingestão de grupos via Excel.
-- `src/flows/ingest_sigpesq.py`: Pipeline ETL atualizado com US-007.
-- `docs/2 - implementacao/SI.3-design.md`: Arquitetura Hexagonal documentada.
-- `PM1.3 Release Plan`: Atualizado com datas reais.
-- `tests/test_loader_mapping.py`: Testes unitários para mapeamento de grupos.
+# 3. Entregáveis da Release
+- Código fonte refatorado (`src/dgp_cnpq_lib`)
+- Release v0.1.0 no GitHub
+- CLI funcional (`python -m dgp_cnpq_lib`)
+- Documentação técnica atualizada
 
 ---
 
-## 4. Pendências e Impedimentos
-| ID | Descrição | Responsável | Status | Ação Necessária |
-|----|------------|-------------|--------|-----------------|
-| P1 | Validação de Docstrings | Antigravity | **Resolvido** | Code Review (Self). |
-| P2 | Acesso VPN SigPesq | User | Aberto | Confirmar necessidade de VPN. |
+# 4. Riscos e Impedimentos
+| ID | Descrição | Status | Ação Tomada |
+|----|-----------|--------|-------------|
+| I1 | Erro no Push (large file) | Resolvido | Removido `.venv` do git tracking |
+| R1 | Timeout em conexões lentas | Controlado | Playwright configurado com timeouts padrão |
 
 ---
 
-## 5. Riscos Atualizados
-| ID | Risco | Impacto | Probabilidade | Status | Ação de Mitigação |
-|----|--------|----------|---------------|---------|-------------------|
-| R1 | Mudança no Layout SigPesq | Alto | Média | Controlado | Adaptador isolado para facilitar correções. |
-
----
-
-## 6. Próximas Ações (Próxima Quinzena)
-- Início da **US-001 (Researcher/Scholarship Ingestion - Pending Part)**.
-- Início da **US-002 (Lattes Extraction)**.
-- **Concluído**: Implementação de Líderes e Strategies (v0.3.0).
-
----
-
-## 7. Aprovação
-| Nome | Cargo | Data |
-|------|--------|------|
-| Antigravity | Senior Lead | 06/01/2026 |
+# 5. Próximos Passos (Próxima Release v0.2.0)
+- Otimização de performance
+- Tratamento avançado de erros
+- Logging estruturado

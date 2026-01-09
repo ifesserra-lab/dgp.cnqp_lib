@@ -32,7 +32,7 @@ A estrutura analítica do projeto (EAP/WBS):
 | **S0** | Fundação OO | ✅ Completo |
 | **S1** | Extração Básica | ✅ Completo |
 | **S2** | CLI e JSON | ✅ Completo |
-| **S3** | Testes e Docs | 🔄 Em Progresso |
+| **S3** | Testes e Docs | ✅ Completo |
 
 ---
 

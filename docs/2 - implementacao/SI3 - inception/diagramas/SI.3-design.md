@@ -1,158 +1,96 @@
 # SI.3 – Projeto de Software (Design)
-**Projeto:** Horizon ETL
-**Versão do Documento:** 1.0
-**Data:** 06/01/2026
-**Responsável pelo Design:** Antigravity (Senior Designer)
+**Projeto:** dgp.cnqp_lib
+**Responsável:** Antigravity (Senior Designer)
+**Versão:** v0.1.0
 
 ---
 
-## 1. Objetivo do Documento
-Definir a Arquitetura Hexagonal e os padrões de design para o Horizon ETL, garantindo desacoplamento, testabilidade e idempotência.
+# 1. Objetivo do Documento
+Definir a arquitetura da biblioteca `dgp.cnqp_lib`, focada em modularidade, orientação a objetos e facilidade de extensão para extração de dados do CNPq.
 
 ---
 
-## 2. Visão Geral da Arquitetura
-**Estilo Arquitetural:** Hexagonal Architecture (Ports & Adapters)
-**Padrão de Integração:** ETL (Extract, Transform, Load) com Orchestration.
+# 2. Visão Geral da Arquitetura
+**Estilo:** Object-Oriented Library (Crawler)
+**Pattern:** Page Object Model (adaptado para Scraper) / Strategy Pattern (para Extratores)
 
 **Diretrizes:**
-- **Core (Hexagon/Logic)**: Contém as regras de negócio puras, entidades e interfaces (Ports). Não depende de frameworks externos ou bancos de dados.
-- **Adapters (Infrastructure)**: Implementações concretas das interfaces (Sources = Scrapers/APIs; Sinks = Supabase/Files).
-- **Flows (Orchestration)**: Onde os componentes são "plugados" e executados via Prefect.
+- **Encapsulamento**: Cada componente (Tabela, Fieldset, Cabeçalho) deve ter seu próprio parser.
+- **Single Responsibility**: `CnpqCrawler` orquestra, `Extractors` parseiam.
+- **Interface Pública Simples**: CLI e Classes acessíveis.
 
 ---
 
-## 3. Arquitetura de Componentes
+# 3. Diagrama de Classes (Mermaid)
 
-### 3.1 Diagrama de Componentes (Mermaid)
 ```mermaid
-flowchart TD
-    subgraph Orchestration [src/flows]
-        Flow[Prefect Flow]
-    end
+classDiagram
+    class CnpqCrawler {
+        +extract_text(selector)
+        +extract_data(url) : dict
+        -page: Page
+    }
 
-    subgraph Core [src/core]
-        PortSource[<Interface>\nISource]
-        PortSink[<Interface>\nISink]
-        Logic[Business Logic\nMappers]
-        Domain[Domain Entities]
-    end
+    class BaseExtractor {
+        +clean_value(text)
+        +normalize_key(text)
+    }
 
-    subgraph Adapters [src/adapters]
-        SigPesq[SigPesq Source]
-        Lattes[Lattes Source]
-        Fapes[Fapes API Client]
-        Supabase[Supabase Sink]
-        JsonFile[JSON File Sink]
-    end
+    class TableExtractor {
+        +extract_tables(soup) : list
+        -parse_table(table)
+    }
 
-    %% Dependency Injection (Orchestration)
-    Flow -.-> PortSource
-    Flow -.-> PortSink
+    class FieldsetParser {
+        +parse_fieldset(fieldset) : dict
+    }
 
-    %% Data Flow (ETL)
-    PortSource == 1. Extract (Raw Data) ==> Logic
-    Logic == 2. Transform (Domain Entities from Lib) ==> PortSink
-    PortSink == 3. Load (Persist) ==> ResearchDomainLib
-    
-    SigPesq --implements--> PortSource
-    Lattes --implements--> PortSource
-    Fapes --implements--> PortSource
-    
-    JsonFile --implements--> PortSink
-    
-    %% External Libraries
-    subgraph SharedKernel [Shared Libraries]
-        ResearchDomainLib[Research Domain Lib\n(Entities & Repositories)]
-    end
-    
-    Logic -.uses.-> ResearchDomainLib
-    Supabase --extends--> ResearchDomainLib
+    CnpqCrawler --|> BaseExtractor : uses
+    CnpqCrawler o-- TableExtractor : composes
+    CnpqCrawler o-- FieldsetParser : composes
 ```
 
-### 3.2 Estrutura de Diretórios (Consolidada)
+---
+
+# 4. Estrutura de Diretórios
 ```text
-src/
-├── core/                  # BUSINESS RULES (Pure Python)
-│   ├── ports/             # Interfaces (Abstract Base Classes)
-│   ├── domain/            # Entities (Pydantic Models)
-│   └── logic/             # Transformations (Mappers, Cleaners)
-│
-├── adapters/              # INFRASTRUCTURE (I/O)
-│   ├── sources/           # Extractors (Scrapers, API Clients)
-│   └── sinks/             # Loaders (Supabase, S3, FileSystem)
-│
-└── flows/                 # ORCHESTRATION (Prefect)
-    └── <flow_name>.py     # Dependency Injection & Execution
+src/dgp_cnpq_lib/
+├── __init__.py          # Exports públicos
+├── __main__.py          # CLI Entrypoint (python -m dgp_cnpq_lib)
+├── core.py              # Classe Principal (CnpqCrawler) e orquestração
+└── extractors.py        # Logic de Parsing (TableExtractor, FieldsetParser)
 ```
 
 ---
 
-## 4. Modelagem de Dados (Schema Simplificado)
+# 5. Interfaces e Contratos
 
-O Banco de Dados (Supabase) reflete as Entidades do Domínio.
-
-```mermaid
-erDiagram
-    PROJECT {
-        uuid id PK
-        string origin_id UK "Unique per Source"
-        string title
-        string status
-        jsonb metadata
-    }
-    RESEARCHER {
-        uuid id PK
-        string lattes_id UK
-        string name
-    }
-    PROJECT }o--|| RESEARCHER : "member"
-```
-*Detalhes completos no SI.2 Análise.*
-
----
-
-## 5. Interfaces e Contratos (Ports)
-
-### 5.1 ISource (`src/core/ports/source.py`)
-Contrato para extração de dados.
+### 5.1 CnpqCrawler (`src/dgp_cnpq_lib/core.py`)
+Principal ponto de entrada.
 ```python
-class ISource(ABC):
-    @abstractmethod
-    def extract(self) -> List[RawData]:
-        """Extrai dados brutos da fonte."""
-        pass
+class CnpqCrawler:
+    def __init__(self):
+        # Inicializa Playwright
+    
+    def extract_data(self, url: str) -> dict:
+        # Navega e retorna JSON completo
 ```
 
-### 5.2 ISink (`src/core/ports/sink.py`)
-Contrato para carga de dados (Idempotent).
+### 5.2 Extractors (`src/dgp_cnpq_lib/extractors.py`)
+Classes especializadas em tratar HTML.
 ```python
-class ISink(ABC):
-    @abstractmethod
-    def load(self, data: List[DomainEntity]) -> LoadStats:
-        """Persiste dados cuidando de Upserts/Deduplicação."""
-        pass
-
-class IExportSink(ABC):
-    @abstractmethod
-    def export(self, data: List[DomainEntity], path: str) -> None:
-        """Exporta entidades para um formato de arquivo."""
-        pass
+class TableExtractor(BaseExtractor):
+    def extract(self, html_content) -> List[dict]:
+        # Processa tabelas HTML em listas de objetos
 ```
 
 ---
 
-## 6. Decisões de Design (ADRs)
+# 6. Decisões de Design (ADRs)
 
 | ID | Decisão | Justificativa |
 |----|---------|---------------|
-| **D1** | **Prefect para Orquestração** | Suporte nativo a Retries, Caching e Observabilidade. |
-| **D2** | **Supabase como Sink Único** | Simplificação da infraestrutura e API REST automática. |
-| **D3** | **Flows Separados** | `src/flows` isola o framework de orquestração do Core. |
-| **D4** | **Consolidação no Core** | Todas as regras e interfaces vivem em `src/core` para evitar dependências circulares. |
-
----
-
-## 7. Rastreabilidade
-- **SI.1 Requirements**: Mapeados para **Flows**.
-- **SI.2 API/DB**: Mapeados para **Sinks** e **Domain**.
+| **D1** | **Playwright** | Necessário para renderizar JavaScript do espelho do CNPq. |
+| **D2** | **CLI Nativa** | Permite uso standalone sem necessidade de escrever scripts Python. |
+| **D3** | **OO Pure** | Facilita testes unitários isolados para cada extrator. |
+| **D4** | **Packaging Moderno** | `pyproject.toml` (hatchling) para compliance com PEP 517/518. |

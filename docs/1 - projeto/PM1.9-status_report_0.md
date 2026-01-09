@@ -1,59 +1,39 @@
-# Status Report <0>
-**Projeto:** <Nome do Projeto>  
-**Período:** <DD/MM> a <DD/MM>  
-**Versão:** <v1.0>  
-**Responsável pelo Relato:** <Nome>  
+# Status Report 0: Iniciação e Fundação
+**Projeto:** dgp.cnqp_lib
+**Período:** 01/01/2026 a 05/01/2026
+**Versão:** v0.0.0
+**Responsável pelo Relato:** Antigravity (Senior PM)
 
 ---
 
-## 1. Resumo Executivo
-Descreva o estado geral do projeto no período.
-
-Exemplo:  
-O projeto está avançando conforme planejado, com o incremento atual em fase de validação. Não foram identificados desvios críticos.
+# 1. Resumo Executivo
+O projeto foi iniciado com sucesso. Foi definido o escopo como uma biblioteca Python especializada para extração de dados do Espelho de Grupo de Pesquisa do CNPq, separando-a do projeto maior "Horizon ETL". A arquitetura inicial e o setup do ambiente de desenvolvimento foram concluídos.
 
 ---
 
-## 2. Progresso da Sprint / Iteração
+# 2. Progresso (Sprint 0)
 | Item | Previsto | Concluído | Observações |
 |------|----------|-----------|-------------|
-| <User Story / Entrega> | Sim/Não | Sim/Não | <Notas> |
-| <User Story / Entrega> | Sim/Não | Sim/Não | <Notas> |
-| <User Story / Entrega> | Sim/Não | Sim/Não | <Notas> |
+| Definição de Escopo | Sim | Sim | Focado em Crawler Library |
+| Setup de Repositório | Sim | Sim | GitFlow e Estrutura de Pastas |
+| Arquitetura Inicial | Sim | Sim | Design OO e Patterns |
 
 ---
 
-## 3. Entregáveis desde o Último Relato
-- <Entrega 1>  
-- <Entrega 2>  
-- <Entrega 3>  
+# 3. Entregáveis
+- `docs/1 - projeto/PM1.0-sow.md` (Statement of Work)
+- `docs/1 - projeto/PM1.1-mission_statement.md`
+- Estrutura inicial do projeto Python
 
 ---
 
-## 4. Pendências e Impedimentos
-| ID | Descrição | Responsável | Status | Ação Necessária |
-|----|------------|-------------|--------|-----------------|
-| P1 | <Descrição> | <Nome> | Aberto/Resolvido | <Ação> |
-| P2 | <Descrição> | <Nome> | Aberto/Resolvido | <Ação> |
+# 4. Riscos Iniciais
+| ID | Risco | Status | Ação |
+|----|-------|--------|------|
+| R1 | Mudança layout CNPq | Ativo | Monitorar site do CNPq |
 
 ---
 
-## 5. Riscos Atualizados
-| ID | Risco | Impacto | Probabilidade | Status | Ação de Mitigação |
-|----|--------|----------|---------------|---------|-------------------|
-| R1 | <Risco> | Alto/Médio/Baixo | Alta/Média/Baixa | Ativo/Controlado | <Mitigação> |
-| R2 | <Risco> | Alto/Médio/Baixo | Alta/Média/Baixa | Ativo/Controlado | <Mitigação> |
-
----
-
-## 6. Próximas Ações (Próxima Sprint/Iteração)
-- <Ação 1>  
-- <Ação 2>  
-- <Ação 3>  
-
----
-
-## 7. Aprovação
-| Nome | Cargo | Assinatura | Data |
-|------|--------|------------|------|
-| <Responsável> | <Cargo> | | |
+# 5. Próximos Passos
+- Implementar crawler básico (Sprint 1)
+- Implementar CLI e saída JSON (Sprint 2)

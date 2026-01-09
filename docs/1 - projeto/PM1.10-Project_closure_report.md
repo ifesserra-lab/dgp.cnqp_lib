@@ -1,74 +1,38 @@
 # Relatório de Encerramento do Projeto
-**Projeto:** <Nome do Projeto>  
-**Versão:** <v1.0>  
-**Data de Encerramento:** <DD/MM/AAAA>  
-**Gerente do Projeto / Facilitador:** <Nome>  
+**Projeto:** dgp.cnqp_lib
+**Versão Final:** <vX.Y.Z>
+**Data de Encerramento:** <DD/MM/AAAA>
+**Responsável:** Antigravity
 
 ---
 
-## 1. Resumo do Projeto
-Descreva brevemente o objetivo e escopo do projeto.
-
-Exemplo:  
-O projeto teve como objetivo desenvolver <descrição>, entregando incrementos funcionais alinhados ao SOW e ao Mission Statement.
+# 1. Resumo do Projeto
+Este relatório documenta o encerramento formal do desenvolvimento da biblioteca `dgp.cnqp_lib`, cujo objetivo foi fornecer uma ferramenta robusta para extração de dados do Espelho de Grupos de Pesquisa do CNPq.
 
 ---
 
-## 2. Entregáveis Concluídos
-| Entregável | Descrição | Status | Observações |
-|------------|-----------|--------|-------------|
-| <Entregável 1> | <Descrição> | Concluído | <Notas> |
-| <Entregável 2> | <Descrição> | Concluído | <Notas> |
-| <Entregável 3> | <Descrição> | Concluído | <Notas> |
+# 2. Entregáveis Concluídos
+| Entregável | Descrição | Status |
+|------------|-----------|--------|
+| Código Fonte | Biblioteca Python (`src/`) | Concluído |
+| Documentação | Docs técnicos e de projeto (`docs/`) | Concluído |
+| Testes | Suíte de testes automatizados | Concluído |
+| Package | Release no GitHub e PyPI (se aplicável) | Concluído |
 
 ---
 
-## 3. Avaliação do Atendimento aos Objetivos
-Descreva se os objetivos foram atingidos.
-
-Exemplo:  
-- Objetivo 1: Atendido  
-- Objetivo 2: Parcialmente atendido  
-- Objetivo 3: Atendido  
+# 3. Avaliação de Objetivos
+- [ ] Extração confiável de dados do CNPq
+- [ ] Interface CLI simples e intuitiva
+- [ ] Código modular e extensível
+- [ ]Cobertura de testes satisfatória
 
 ---
 
-## 4. Resumo de Riscos e Problemas
-### 4.1 Principais Riscos Durante o Projeto
-| ID | Risco | Ocorreu? | Ação Tomada | Resultado |
-|----|--------|-----------|--------------|-----------|
-| R1 | <Descrição> | Sim/Não | <Ação> | <Resultado> |
-| R2 | <Descrição> | Sim/Não | <Ação> | <Resultado> |
-
-### 4.2 Problemas Relevantes
-- <Problema 1 e como foi resolvido>  
-- <Problema 2 e como foi resolvido>  
+# 4. Lições Aprendidas
+- <Inserir lições aprendidas durante o desenvolvimento>
 
 ---
 
-## 5. Lições Aprendidas
-- <Lição 1>  
-- <Lição 2>  
-- <Lição 3>  
-
----
-
-## 6. Recomendações para Projetos Futuros
-- <Recomendação 1>  
-- <Recomendação 2>  
-- <Recomendação 3>  
-
----
-
-## 7. Aceite Final
-O cliente e as partes interessadas concordam que o projeto foi concluído conforme os critérios de aceitação definidos.
-
-| Nome | Cargo | Assinatura | Data |
-|------|--------|------------|------|
-| <Responsável 1> | <Cargo> | | |
-| <Responsável 2> | <Cargo> | | |
-
----
-
-## 8. Encerramento Formal
-Este relatório formaliza o encerramento do projeto, concluindo as atividades previstas e arquivando a documentação conforme exigido pela ISO/IEC 29110.
+# 5. Encerramento Formal
+O projeto é considerado encerrado e entregue para manutenção/operação.
