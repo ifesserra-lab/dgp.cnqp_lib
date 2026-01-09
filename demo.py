@@ -29,7 +29,14 @@ def main():
             print(f"Total de Linhas de Pesquisa: {len(data['linhas_de_pesquisa'])}")
             
         print("-" * 40)
-        logger.success("Demonstração concluída com sucesso!")
+
+        # 5. Exemplo de como salvar em JSON (Responsabilidade do Cliente)
+        output_file = "demo_resultado.json"
+        import json
+        with open(output_file, "w", encoding="utf-8") as f:
+            json.dump(data, f, indent=2, ensure_ascii=False)
+
+        logger.success(f"Demonstração concluída! Dados salvos em: {output_file}")
         
     except Exception as e:
         logger.error(f"Erro na demonstração: {e}")
