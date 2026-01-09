@@ -5,6 +5,9 @@ from typing import Any, Dict, List, Tuple
 from playwright.sync_api import ElementHandle
 
 
+from .logger import logger
+
+
 class BaseExtractor:
     @staticmethod
     def extract_text(element: ElementHandle, selector: str) -> str:
@@ -91,20 +94,25 @@ class FieldsetParser(BaseExtractor):
 
     def parse(self, fieldset: ElementHandle) -> Tuple[str, Dict[str, Any]]:
         """Parses a fieldset element to extract legend and data."""
-        legend = self.extract_text(fieldset, "legend")
-        data = {}
+        try:
+            legend = self.extract_text(fieldset, "legend")
+            data = {}
 
-        # Extract key-value pairs
-        self._extract_labels(fieldset, data)
+            # Extract key-value pairs
+            self._extract_labels(fieldset, data)
 
-        # Extract tables
-        self._extract_tables(fieldset, legend, data)
+            # Extract tables
+            self._extract_tables(fieldset, legend, data)
 
-        # Text content (Repercussões) fallback
-        if not data:
-            self._extract_text_content(fieldset, data)
+            # Text content (Repercussões) fallback
+            if not data:
+                self._extract_text_content(fieldset, data)
 
-        return legend, data
+            return legend, data
+        except Exception as e:
+            # Fallback for malformed fieldsets
+            logger.error(f"Error parsing fieldset: {e}")
+            return "", {}
 
     def _extract_labels(self, fieldset: ElementHandle, data: Dict[str, Any]):
         labels = fieldset.query_selector_all("label.control-label")

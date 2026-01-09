@@ -1,20 +1,26 @@
+import argparse
 import json
 import re
 import sys
 
 from .core import CnpqCrawler
+from .logger import configure_logger, logger
 
 
 def main():
-    if len(sys.argv) < 2:
-        print("Uso: python -m dgp_cnpq_lib <url>")
-        sys.exit(1)
+    parser = argparse.ArgumentParser(description="CNPq Research Group Extractor")
+    parser.add_argument("url", help="URL of the research group mirror")
+    parser.add_argument("--json-logs", action="store_true", help="Output logs in JSON format")
+    parser.add_argument("--verbose", "-v", action="store_true", help="Enable verbose (DEBUG) logging")
 
-    url = sys.argv[1]
+    args = parser.parse_args()
+
+    configure_logger(json_mode=args.json_logs, verbose=args.verbose)
+
     crawler = CnpqCrawler()
 
     try:
-        data = crawler.get_data(url)
+        data = crawler.get_data(args.url)
 
         # Sanitize filename
         group_name = data.get("nome_grupo", "grupo_pesquisa")
@@ -26,10 +32,10 @@ def main():
         with open(filename, "w", encoding="utf-8") as f:
             json.dump(data, f, indent=2, ensure_ascii=False)
 
-        print(f"Dados extraídos com sucesso e salvos em {filename}")
+        logger.info(f"Dados extraídos com sucesso e salvos em {filename}")
 
     except Exception as e:
-        print(f"Erro ao extrair dados: {e}")
+        logger.error(f"Erro ao extrair dados: {e}")
         sys.exit(1)
 
 
