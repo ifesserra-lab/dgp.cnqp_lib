@@ -1,12 +1,13 @@
 # Project Backlog - DGP CNPq Library
 
-This document is automatically synchronized with GitHub Issues. Last updated: 2026-01-09 16:20:20
+This document is automatically synchronized with GitHub Issues. Last updated: 2026-01-09 16:21:24
 
 ## 📋 Master Issue List
 Overview of all demands, their states and executors.
 
 | # | Status | Title | Executor | Sprint | Milestone |
 | :--- | :--- | :--- | :--- | :--- | :--- |
+| [# 23](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/23) | 🟢 | fix: linting error in __main__.py | - | - | - |
 | [# 20](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/20) | ✅ | Add maintenance scripts | - | - | - |
 | [# 18](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/18) | ✅ | Release v0.3.0 | - | - | - |
 | [# 16](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/16) | 🟢 | Update Backlog - Remove SigPesq References | - | - | - |
@@ -24,6 +25,7 @@ Overview of all demands, their states and executors.
 ## 📂 Workflow States
 
 ### 🟢 In Progress / Todo
+- [#23](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/23) **fix: linting error in __main__.py**
 - [#16](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/16) **Update Backlog - Remove SigPesq References**
 - [#14](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/14) **Refactor Package Exports**
 - [#6](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/6) **US-004: Logging Estruturado**
@@ -41,6 +43,22 @@ Overview of all demands, their states and executors.
 ---
 
 ## 📝 Detailed Backlog
+
+### [OPEN] [#23](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/23) fix: linting error in __main__.py
+- **Executor**: -
+- **Labels**: bug, linting
+- **Milestone**: -
+
+**Description**:
+Fix linting error in `src/dgp_cnpq_lib/__main__.py`.
+
+**Error**:
+`black` check failed in CI.
+
+**Action**:
+Run `black` formatter on the file.
+
+---
 
 ### [CLOSED] [#20](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/20) Add maintenance scripts
 - **Executor**: -
