@@ -7,7 +7,8 @@ Tracks the delivery of versions to production (Main Branch).
 
 | Version | Date | Status | Description | PR / Commit |
 |---------|------|--------|-------------|-------------|
-| **v0.3.0** | 2026-01-09 | Released | ResearcherID & Granular Strategy Pattern | PR #18 |
+| **v0.3.1** | 2026-01-09 | Released | Maintenance Scripts | PR #22 |
+| **v0.3.0** | 2026-01-09 | Released | ResearcherID & Granular Strategy Pattern | PR #19 |
 | **v0.2.0** | 2026-01-09 | Released | Output Path Feature & Documentation Updates | [PR #12](https://github.com/ifesserra-lab/dgp.cnqp_lib/pull/12) |
 | **v0.1.0** | 2026-01-09 | Released | OO Architecture Refactor & Modernization | [PR #3](https://github.com/ifesserra-lab/dgp.cnqp_lib/pull/3) / [4dadb7a](https://github.com/ifesserra-lab/dgp.cnqp_lib/commit/4dadb7a14776411a00ff8e2968fd2a0cb47e69db) |
 | **v0.0.0** | 2026-01-01 | Released | Project Initiation | - |
