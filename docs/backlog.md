@@ -3,35 +3,27 @@
 **Central Tracking for Releases and Work Items**
 
 ## 1. Releases Log
-Tracks the delivery of versions to production (Main Branch).
+Tracks the delivery of versions to production (Master Branch).
 
 | Version | Date | Status | Description | PR / Commit |
 |---------|------|--------|-------------|-------------|
-| **v0.3.0** | 2026-01-07 | Released | SigPesq Enhancements, ResearcherID & Granular Strategy Pattern | PR #13 |
-| **v0.2.0** | 2026-01-06 | Released | Research Group Ingestion & Local Infrastructure | Main |
-| **v0.1.0** | 2026-01-09 | Released | OO Architecture Refactor & Modernization | [PR #3](https://github.com/ifesserra-lab/dgp.cnqp_lib/pull/3) / [4dadb7a](https://github.com/ifesserra-lab/dgp.cnqp_lib/commit/4dadb7a14776411a00ff8e2968fd2a0cb47e69db) |
+| **v0.1.0** | 2026-01-09 | Released | OO Architecture Refactor & Modernization | [PR #4](https://github.com/ifesserra-lab/dgp.cnqp_lib/pull/4) / [2c91747](https://github.com/ifesserra-lab/dgp.cnqp_lib/commit/2c91747) |
 | **v0.0.0** | 2026-01-01 | Released | Project Initiation | - |
 
 ## 2. In Progress Items (Current Sprint)
-Reflecting active work from `SI.3 Product Backlog`.
+Reflecting active work for **Release v0.2.0 (Performance)**.
 
-- **CNPq Crawler Library**
-    - [x] Issue #1 [Update Documentation and Implement Test Suite](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/1) ([PR #3](https://github.com/ifesserra-lab/dgp.cnqp_lib/pull/3) - Merged)
-    - [x] Issue #2 [Modernize project structure with pyproject.toml](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/2) ([PR #3](https://github.com/ifesserra-lab/dgp.cnqp_lib/pull/3) - Merged)
-
-- **Epic 3: Dados de Execução FAPES (Release 3)**
-    - [ ] US-006 [Extração de Editais FAPES (PDF)](https://github.com/ifesserra-lab/horizon_etl/issues/1)
+- **Robustez e Performance**
+    - [ ] US-003 [Tratamento de Erros e Retries] (Backlog)
+    - [ ] US-004 [Logging Estruturado] (Backlog)
 
 ## 3. Hierarchical Status
 Mapping Epics -> User Stories -> Tasks status.
 
-### CNPq Crawler Library
-- **Issue #1**: Done (Merged via PR #3)
-- **Issue #2**: Done (Merged via PR #3)
+### Release v0.1.0 (Concluída)
+- **Feature #1 (Docs & Tests)**: ✅ Done (PR #3)
+- **Feature #2 (Modernization)**: ✅ Done (PR #3)
 
-### R3 - SigFapes
-- **US-006**: Ready
-    - T-006 [Dev] Scraper: Pending
-    - T-007 [Dev] Parser: Pending
-    - T-008 [Dev] Matcher: Pending
-    - T-009 [Ops] Flow: Pending
+### Release v0.2.0 (Planejada)
+- **US-003**: Pending
+- **US-004**: Pending
