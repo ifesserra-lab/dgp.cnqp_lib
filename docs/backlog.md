@@ -1,6 +1,6 @@
 # Project Backlog - DGP CNPq Library
 
-This document is automatically synchronized with GitHub Issues. Last updated: 2026-01-09 18:24:16
+This document is automatically synchronized with GitHub Issues. Last updated: 2026-01-09 18:24:22
 
 ## 📋 Master Issue List
 Overview of all demands, their states and executors.
@@ -14,8 +14,8 @@ Overview of all demands, their states and executors.
 | [# 23](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/23) | ✅ | fix: linting error in __main__.py | - | - | - |
 | [# 20](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/20) | ✅ | Add maintenance scripts | - | - | - |
 | [# 18](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/18) | ✅ | Release v0.3.0 | - | - | - |
-| [# 16](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/16) | 🟢 | Update Backlog - Remove SigPesq References | - | - | - |
-| [# 14](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/14) | 🟢 | Refactor Package Exports | - | - | - |
+| [# 16](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/16) | ✅ | Update Backlog - Remove SigPesq References | - | - | - |
+| [# 14](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/14) | ✅ | Refactor Package Exports | - | - | - |
 | [# 12](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/12) | ✅ | Release v0.2.0 Preparation | - | - | - |
 | [# 10](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/10) | ✅ | Task: Create demo.py usage example | - | - | - |
 | [# 8](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/8) | ✅ | US-005: Custom Output Path CLI Argument | - | - | - |
@@ -29,8 +29,7 @@ Overview of all demands, their states and executors.
 ## 📂 Workflow States
 
 ### 🟢 In Progress / Todo
-- [#16](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/16) **Update Backlog - Remove SigPesq References**
-- [#14](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/14) **Refactor Package Exports**
+_No issues in this state._
 
 ### ✅ Done / Released
 - [#32](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/32) **Update Agile Standards: CI/CD Monitoring Enforcement**
@@ -40,6 +39,8 @@ Overview of all demands, their states and executors.
 - [#23](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/23) **fix: linting error in __main__.py**
 - [#20](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/20) **Add maintenance scripts**
 - [#18](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/18) **Release v0.3.0**
+- [#16](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/16) **Update Backlog - Remove SigPesq References**
+- [#14](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/14) **Refactor Package Exports**
 - [#12](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/12) **Release v0.2.0 Preparation**
 - [#10](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/10) **Task: Create demo.py usage example**
 - [#8](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/8) **US-005: Custom Output Path CLI Argument**
@@ -168,7 +169,7 @@ Release v0.3.0
 
 ---
 
-### [OPEN] [#16](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/16) Update Backlog - Remove SigPesq References
+### [CLOSED] [#16](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/16) Update Backlog - Remove SigPesq References
 - **Executor**: -
 - **Labels**: documentation, cleanup
 - **Milestone**: -
@@ -183,7 +184,7 @@ Update `docs/backlog.md` to remove incorrect references to "SigPesq".
 
 ---
 
-### [OPEN] [#14](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/14) Refactor Package Exports
+### [CLOSED] [#14](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/14) Refactor Package Exports
 - **Executor**: -
 - **Labels**: refactor
 - **Milestone**: -
