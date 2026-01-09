@@ -3,7 +3,7 @@
 **Central Tracking for Releases and Work Items**
 
 ## 1. Releases Log
-Tracks the delivery of versions to production (Master Branch).
+Tracks the delivery of versions to production (Main Branch).
 
 | Version | Date | Status | Description | PR / Commit |
 |---------|------|--------|-------------|-------------|

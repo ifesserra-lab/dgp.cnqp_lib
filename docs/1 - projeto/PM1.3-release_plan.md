@@ -20,7 +20,7 @@ O projeto segue o modelo de releases incrementais baseadas em funcionalidades.
 
 ## 2.1 Release v0.1.0 – OO Architecture & Modernization ✅
 **Data de Release:** 09/01/2026  
-**Status:** Released to Production (master)
+**Status:** Released to Production (main)
 
 **Objetivos Alcançados:**
 - ✅ Refatoração completa para arquitetura OO
@@ -97,7 +97,7 @@ Seguimos **Semantic Versioning** (SemVer 2.0.0):
 **Tags Git:**
 - Cada release **DEVE** ter uma tag `vX.Y.Z`
 - Tag `latest` sempre aponta para a release mais recente
-- Tags são criadas automaticamente no merge para `master`
+- Tags são criadas automaticamente no merge para `main`
 
 ---
 
@@ -105,7 +105,7 @@ Seguimos **Semantic Versioning** (SemVer 2.0.0):
 
 1. **Development**: Features desenvolvidas em branches `feat/*` → merge para `developing`
 2. **Quality Gate**: CI/CD valida testes e linting em `developing`
-3. **Release PR**: `developing` → `master` (título: `release: vX.Y.Z`)
+3. **Release PR**: `developing` → `main` (título: `release: vX.Y.Z`)
 4. **Tag**: Após merge, criar tag `git tag vX.Y.Z && git push origin vX.Y.Z`
 5. **GitHub Release**: CI/CD cria release automaticamente com assets compilados
 6. **Publish**: Pacote publicado no GitHub Packages

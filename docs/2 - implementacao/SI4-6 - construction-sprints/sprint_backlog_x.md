@@ -41,6 +41,6 @@ Para considerar a Sprint concluída, todos os itens devem atender:
 - [ ] **Walkthrough**: Evidências de funcionamento (se aplicável).
 
 ### Encerramento
-- [ ] Pull Request mergeado em `developing` (ou `master` se Release).
+- [ ] Pull Request mergeado em `developing` (ou `main` se Release).
 - [ ] Branches locais e remotas deletadas.
 - [ ] Backlog atualizado.
