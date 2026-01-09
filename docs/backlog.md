@@ -9,20 +9,15 @@ Tracks the delivery of versions to production (Main Branch).
 |---------|------|--------|-------------|-------------|
 | **v0.3.0** | 2026-01-07 | Released | SigPesq Enhancements, ResearcherID & Granular Strategy Pattern | PR #13 |
 | **v0.2.0** | 2026-01-06 | Released | Research Group Ingestion & Local Infrastructure | Main |
+| **v0.1.0** | 2026-01-09 | Released | OO Architecture Refactor & Modernization | [PR #3](https://github.com/ifesserra-lab/dgp.cnqp_lib/pull/3) / [4dadb7a](https://github.com/ifesserra-lab/dgp.cnqp_lib/commit/4dadb7a14776411a00ff8e2968fd2a0cb47e69db) |
 | **v0.0.0** | 2026-01-01 | Released | Project Initiation | - |
 
 ## 2. In Progress Items (Current Sprint)
 Reflecting active work from `SI.3 Product Backlog`.
 
-- **Epic 1: Extração SigPesq (Release 1)**
-    - [x] US-001 [Extração Projetos SigPesq](https://github.com/ifesserra-lab/horizon_etl/issues/2) (Merged)
-    - [x] US-007 [Ingestão Grupos de Pesquisa] (PR #4 - Merged)
-    - [x] T-Leaders [Implementação de Líderes] (PR #7 - Merged)
-    - [x] T-ResearcherID [E-mail como identification_id] (PR #10 - Merged)
-    - [x] T-StrategyPattern [Refatoração Strategy Pattern] (PR #11 - Merged)
-    - [x] T-GranularStrategy [Refatoração Granular Pattern] (PR #12 - Merged)
-    - [x] US-005 Observabilidade e Idempotência (Implemented)
-    - [x] US-008 [Exportação JSON Canônico e Grupos] (PR #15 - Merged)
+- **CNPq Crawler Library**
+    - [x] Issue #1 [Update Documentation and Implement Test Suite](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/1) ([PR #3](https://github.com/ifesserra-lab/dgp.cnqp_lib/pull/3) - Merged)
+    - [x] Issue #2 [Modernize project structure with pyproject.toml](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/2) ([PR #3](https://github.com/ifesserra-lab/dgp.cnqp_lib/pull/3) - Merged)
 
 - **Epic 3: Dados de Execução FAPES (Release 3)**
     - [ ] US-006 [Extração de Editais FAPES (PDF)](https://github.com/ifesserra-lab/horizon_etl/issues/1)
@@ -30,10 +25,9 @@ Reflecting active work from `SI.3 Product Backlog`.
 ## 3. Hierarchical Status
 Mapping Epics -> User Stories -> Tasks status.
 
-### R1 - SigPesq
-- **US-001**: Done (Merged)
-- **US-007**: Done (Merged)
-- **US-005**: Done (Implemented)
+### CNPq Crawler Library
+- **Issue #1**: Done (Merged via PR #3)
+- **Issue #2**: Done (Merged via PR #3)
 
 ### R3 - SigFapes
 - **US-006**: Ready
