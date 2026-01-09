@@ -1,8 +1,8 @@
+import argparse
 import json
+import logging
 import re
 import sys
-import argparse
-import logging
 
 from .core import CnpqCrawler
 
