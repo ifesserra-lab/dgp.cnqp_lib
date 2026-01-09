@@ -1,12 +1,13 @@
 # Project Backlog - DGP CNPq Library
 
-This document is automatically synchronized with GitHub Issues. Last updated: 2026-01-09 16:32:31
+This document is automatically synchronized with GitHub Issues. Last updated: 2026-01-09 16:37:19
 
 ## 📋 Master Issue List
 Overview of all demands, their states and executors.
 
 | # | Status | Title | Executor | Sprint | Milestone |
 | :--- | :--- | :--- | :--- | :--- | :--- |
+| [# 32](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/32) | 🟢 | Update Agile Standards: CI/CD Monitoring Enforcement | - | - | - |
 | [# 29](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/29) | 🟢 | fix: project-wide code style compliance | - | - | - |
 | [# 27](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/27) | 🟢 | fix: isort error in __main__.py | - | - | - |
 | [# 25](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/25) | 🟢 | Update Agile Standards: Strict Linting Enforcement | - | - | - |
@@ -28,6 +29,7 @@ Overview of all demands, their states and executors.
 ## 📂 Workflow States
 
 ### 🟢 In Progress / Todo
+- [#32](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/32) **Update Agile Standards: CI/CD Monitoring Enforcement**
 - [#29](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/29) **fix: project-wide code style compliance**
 - [#27](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/27) **fix: isort error in __main__.py**
 - [#25](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/25) **Update Agile Standards: Strict Linting Enforcement**
@@ -49,6 +51,23 @@ Overview of all demands, their states and executors.
 ---
 
 ## 📝 Detailed Backlog
+
+### [OPEN] [#32](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/32) Update Agile Standards: CI/CD Monitoring Enforcement
+- **Executor**: -
+- **Labels**: documentation, standards
+- **Milestone**: -
+
+**Description**:
+Update `agile-standards.md` to include mandatory monitoring of GitHub Actions.
+
+**Requirements**:
+- Any GitHub Action failure MUST result in the immediate creation of a Bug Issue.
+- Action status MUST be checked and verified as passing before considering a PR or Task as "Done".
+
+**Changes**:
+- Update `.agent/workflows/agile-standards.md` section 8 and 9.
+
+---
 
 ### [OPEN] [#29](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/29) fix: project-wide code style compliance
 - **Executor**: -
