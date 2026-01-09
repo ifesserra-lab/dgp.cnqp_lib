@@ -9,6 +9,7 @@ from .core import CnpqCrawler
 # Initialize logger
 logger = logging.getLogger(__name__)
 
+
 def configure_logger(json_mode=False, verbose=False):
     """
     Configures the logger based on command-line arguments.
@@ -26,19 +27,25 @@ def configure_logger(json_mode=False, verbose=False):
     if json_mode:
         # A more sophisticated JSON formatter would be needed here
         # For simplicity, we'll just output basic JSON for now or a placeholder
-        formatter = logging.Formatter('{"time": "%(asctime)s", "level": "%(levelname)s", "message": "%(message)s"}')
+        formatter = logging.Formatter(
+            '{"time": "%(asctime)s", "level": "%(levelname)s", "message": "%(message)s"}'
+        )
     else:
-        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+        formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
     handler.setFormatter(formatter)
     logger.addHandler(handler)
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Extract data from a CNPq research group mirror URL.")
+    parser = argparse.ArgumentParser(
+        description="Extract data from a CNPq research group mirror URL."
+    )
     parser.add_argument("url", help="URL of the research group mirror")
     parser.add_argument("--output", "-o", help="Custom output JSON file path")
     parser.add_argument("--json-logs", action="store_true", help="Output logs in JSON format")
-    parser.add_argument("--verbose", "-v", action="store_true", help="Enable verbose (DEBUG) logging")
+    parser.add_argument(
+        "--verbose", "-v", action="store_true", help="Enable verbose (DEBUG) logging"
+    )
 
     args = parser.parse_args()
 
