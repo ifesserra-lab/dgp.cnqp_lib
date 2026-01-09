@@ -2,18 +2,21 @@ import time
 
 from playwright.sync_api import sync_playwright
 
+from .decorators import retry_handler
 from .extractors import FieldsetParser
+from .logger import logger
 
 
 class CnpqCrawler:
     def __init__(self):
         self.parser = FieldsetParser()
 
+    @retry_handler()
     def get_data(self, url: str) -> dict:
         with sync_playwright() as p:
             browser = p.chromium.launch(headless=True)
             page = browser.new_page()
-            print(f"Navigating to {url}...")
+            logger.info(f"Navigating to {url}...")
             page.goto(url)
 
             # Wait for content to load
