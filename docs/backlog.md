@@ -1,12 +1,13 @@
 # Project Backlog - DGP CNPq Library
 
-This document is automatically synchronized with GitHub Issues. Last updated: 2026-01-09 16:28:59
+This document is automatically synchronized with GitHub Issues. Last updated: 2026-01-09 16:32:31
 
 ## 📋 Master Issue List
 Overview of all demands, their states and executors.
 
 | # | Status | Title | Executor | Sprint | Milestone |
 | :--- | :--- | :--- | :--- | :--- | :--- |
+| [# 29](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/29) | 🟢 | fix: project-wide code style compliance | - | - | - |
 | [# 27](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/27) | 🟢 | fix: isort error in __main__.py | - | - | - |
 | [# 25](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/25) | 🟢 | Update Agile Standards: Strict Linting Enforcement | - | - | - |
 | [# 23](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/23) | 🟢 | fix: linting error in __main__.py | - | - | - |
@@ -27,6 +28,7 @@ Overview of all demands, their states and executors.
 ## 📂 Workflow States
 
 ### 🟢 In Progress / Todo
+- [#29](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/29) **fix: project-wide code style compliance**
 - [#27](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/27) **fix: isort error in __main__.py**
 - [#25](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/25) **Update Agile Standards: Strict Linting Enforcement**
 - [#23](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/23) **fix: linting error in __main__.py**
@@ -47,6 +49,20 @@ Overview of all demands, their states and executors.
 ---
 
 ## 📝 Detailed Backlog
+
+### [OPEN] [#29](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/29) fix: project-wide code style compliance
+- **Executor**: -
+- **Labels**: maintenance, style
+- **Milestone**: -
+
+**Description**:
+Ensure all project files (including `demo.py` and `scripts/`) follow the code style standards.
+
+**Actions**:
+- Run `black` and `isort` project-wide.
+- Verify `flake8`.
+
+---
 
 ### [OPEN] [#27](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/27) fix: isort error in __main__.py
 - **Executor**: -
