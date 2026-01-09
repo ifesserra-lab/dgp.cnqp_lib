@@ -1,56 +1,120 @@
 # Release Plan
-**Projeto:** Horizon ETL
-**Versão:** 1.0
+**Projeto:** dgp_cnpq_lib
+**Versão:** 2.0
+**Última Atualização:** 09/01/2026
 
 ---
 
 # 1. Visão Geral de Releases
-O projeto será entregue em 4 releases mensais incrementais.
+O projeto segue o modelo de releases incrementais baseadas em funcionalidades.
 
-| Release | Objetivo Principal | Data Estimada | Status |
-|---------|--------------------|----------------|--------|
-| **R1** | Integração SigPesq (IFES) | 06/02/2026 | Planejado |
-| **R2** | Integração Lattes (CNPq) | 06/03/2026 | Planejado |
-| **R3** | Integração SigFapes (FAPES) | 06/04/2026 | Planejado |
-| **R4** | Integração Google Scholar | 06/05/2026 | Planejado |
+| Release | Objetivo Principal | Data | Status |
+|---------|-------------------|------|--------|
+| **v0.1.0** | OO Architecture & Modernization | 09/01/2026 | ✅ Released |
+| **v0.2.0** | Performance & Error Handling | Q1 2026 | 📋 Planejado |
+| **v1.0.0** | Production Stable | Q2 2026 | 📋 Planejado |
 
 ---
 
 # 2. Detalhamento por Release
 
-## 2.1 Release R1 – SigPesq (Fundação)
-**Objetivo:** Capturar dados institucionais de projetos de pesquisa e extensão do sistema interno (IFES).
-**Funcionalidades:**
-- Setup do ambiente Prefect + Supabase.
-- ETL de Projetos e Pesquisadores do SigPesq.
-- Tabelas Core no Banco de Dados.
+## 2.1 Release v0.1.0 – OO Architecture & Modernization ✅
+**Data de Release:** 09/01/2026  
+**Status:** Released to Production (master)
 
-## 2.2 Release R2 – Lattes
-**Objetivo:** Enriquecer os perfis dos pesquisadores com dados públicos do CNPq.
-**Funcionalidades:**
-- ETL de Currículos Lattes (identificação por nome/CPF obtidos no R1).
-- Extração de produções bibliográficas e técnicas.
+**Objetivos Alcançados:**
+- ✅ Refatoração completa para arquitetura OO
+- ✅ Migração para `pyproject.toml` (padrão moderno)
+- ✅ CI/CD com linting automatizado
+- ✅ Suite de testes (6 testes unitários/integração)
+- ✅ Documentação completa atualizada
 
-## 2.3 Release R3 – SigFapes
-**Objetivo:** Monitorar oportunidades de fomento, editais estaduais e a execução financeira dos projetos.
-**Funcionalidades:**
-- ETL de Projetos, Bolsas e Compras (Dados Abertos/API).
-- ETL de Projetos aprovados, Bolsistas vinculados e Compras realizadas.
-- **Integração API FAPES (Projetos, Bolsas e Pagamentos).**
-- Classificação de oportunidades.
+**Funcionalidades Implementadas:**
+- **Classes OO**:
+  - `BaseExtractor`: Utilitários base para extração
+  - `TableExtractor`: Parsing de tabelas HTML
+  - `FieldsetParser`: Parsing de fieldsets CNPq
+  - `CnpqCrawler`: Orquestração com Playwright
+- **CLI Entry Point**: `python -m dgp_cnpq_lib <url>`
+- **Modernização**:
+  - `pyproject.toml` com hatchling
+  - `requirements.txt` e `requirements-dev.txt`
+  - Linting (black, isort, flake8)
 
-## 2.4 Release R4 – Google Scholar
-**Objetivo:** Métricas acadêmicas e citações.
-**Funcionalidades:**
-- ETL de perfil do Google Scholar.
-- Citações e índice-h.
-- Consolidação final dos dados.
+**PRs e Issues:**
+- PR #3: Feature implementation
+- PR #4: Release to master
+- Issue #1: Documentation and Test Suite
+- Issue #2: Modernize Project Structure
+
+**Commit SHA:** `2c91747`
 
 ---
 
-# 3. Milestones no GitHub
-Cada Release acima **DEVE** ter um Milestone correspondente criado no GitHub:
-- `v0.1.0 - R1 SigPesq`
-- `v0.2.0 - R2 Lattes`
-- `v0.3.0 - R3 SigFapes`
-- `v1.0.0 - R4 Scholar`
+## 2.2 Release v0.2.0 – Performance & Error Handling 📋
+**Data Estimada:** Q1 2026  
+**Status:** Planejado
+
+**Objetivos:**
+- Otimização de performance para extração em lote
+- Tratamento robusto de erros e timeouts
+- Retry logic com backoff exponencial
+- Logging estruturado (JSON)
+
+**Funcionalidades Planejadas:**
+- Sistema de cache para páginas já extraídas
+- Parallel extraction com asyncio
+- Graceful degradation para páginas malformadas
+- Métricas de performance (Prometheus-compatible)
+
+---
+
+## 2.3 Release v1.0.0 – Production Stable 📋
+**Data Estimada:** Q2 2026  
+**Status:** Planejado
+
+**Objetivos:**
+- Estabilidade comprovada em produção
+- Cobertura de testes > 90%
+- Documentação completa para desenvolvedores
+- Exemplo de integração com outros sistemas
+
+**Funcionalidades Planejadas:**
+- Plugin system para extensibilidade
+- Export adicional (CSV, Excel)
+- API HTTP (opcional) para integração remota
+- Containerização (Docker)
+
+---
+
+# 3. Estratégia de Versionamento (SemVer)
+
+Seguimos **Semantic Versioning** (SemVer 2.0.0):
+- **MAJOR** (X.0.0): Breaking changes incompatíveis
+- **MINOR** (0.X.0): Novas funcionalidades retro-compatíveis
+- **PATCH** (0.0.X): Bug fixes retro-compatíveis
+
+**Tags Git:**
+- Cada release **DEVE** ter uma tag `vX.Y.Z`
+- Tag `latest` sempre aponta para a release mais recente
+- Tags são criadas automaticamente no merge para `master`
+
+---
+
+# 4. Processo de Release (GitFlow)
+
+1. **Development**: Features desenvolvidas em branches `feat/*` → merge para `developing`
+2. **Quality Gate**: CI/CD valida testes e linting em `developing`
+3. **Release PR**: `developing` → `master` (título: `release: vX.Y.Z`)
+4. **Tag**: Após merge, criar tag `git tag vX.Y.Z && git push origin vX.Y.Z`
+5. **GitHub Release**: CI/CD cria release automaticamente com assets compilados
+6. **Publish**: Pacote publicado no GitHub Packages
+
+---
+
+# 5. Milestones no GitHub
+
+Cada release major/minor **DEVE** ter um Milestone correspondente:
+- ✅ `v0.1.0 - OO Architecture` (Fechado: 09/01/2026)
+- 📋 `v0.2.0 - Performance` (A criar)
+- 📋 `v1.0.0 - Stable` (A criar)
