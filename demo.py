@@ -1,5 +1,5 @@
 import sys
-from dgp_cnpq_lib.core import CnpqCrawler
+from dgp_cnpq_lib import CnpqCrawler
 from dgp_cnpq_lib.logger import configure_logger, logger
 
 def main():
