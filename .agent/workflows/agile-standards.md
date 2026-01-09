@@ -53,7 +53,8 @@ Maintain the following artifacts throughout the lifecycle:
 - [ ] **OO Design**: All logic encapsulated in Classes. No standalone functions. **MANDATORY**.
 - [ ] **Type Hints**: All methods must have type hints.
 - [ ] **TDD**: Implement the test cases defined in the plan BEFORE the implementation code.
-- [ ] **Style**: Code must pass `black`, `flake8`, `isort`.
+- [ ] **Lint Enforcement**: Code MUST pass `black`, `flake8`, and `isort` check BEFORE any commit. **MANDATORY AND NON-NEGOTIABLE**.
+    - **Pre-Commit**: Ensure no linting errors exist in ALL files.
 - [ ] **Business Logic**: All business rules requirements must be satisfied and verified.
 
 ## 6. Pull Request Standards
