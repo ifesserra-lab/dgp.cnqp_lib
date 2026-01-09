@@ -12,7 +12,7 @@ Este documento define os requisitos para a biblioteca de extração de dados do 
 
 ### RF-02: Saída JSON Padronizada
 - **Descrição**: O sistema deve salvar os dados extraídos em um arquivo JSON.
-- **Regra**: O nome do arquivo deve ser baseado no nome do grupo (ex: `grupo_x.json`).
+- **Regra**: O nome do arquivo deve ser baseado no nome do grupo (ex: `grupo_x.json`) OU conforme especificado pelo usuário via argumento.
 
 ### RF-03: Extração de Metadados
 - **Descrição**: O sistema deve identificar e extrair:

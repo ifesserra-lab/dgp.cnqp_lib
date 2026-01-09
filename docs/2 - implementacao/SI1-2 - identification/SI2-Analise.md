@@ -14,6 +14,14 @@ O projeto `dgp_cnpq_lib` é uma biblioteca Python projetada para extrair dados d
 - **Classe `TableExtractor`**: Especializada em converter tabelas HTML em listas de dicionários.
 - **Classe `FieldsetParser`**: Especializada em processar blocos `<fieldset>` do CNPq para extrair metadados e tabelas aninhadas.
 
+### 2.3 Interface CLI (`__main__`)
+- **Responsabilidade**: Ponto de entrada para execução via linha de comando.
+- **Argumentos Suportados**:
+    - `url` (Posicional): URL do grupo.
+    - `--output`, `-o` (Opcional): Caminho do arquivo de saída.
+    - `--verbose`, `-v` (Opcional): Ativa logs detalhados.
+    - `--json-logs` (Opcional): Saída de logs em JSON.
+
 ## 3. Diagrama de Classes (Conceitual)
 
 ```mermaid
