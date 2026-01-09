@@ -4,7 +4,7 @@ import urllib.request
 import datetime
 
 # Configuration
-REPO = "The-Band-Solution/ResearchDomain"
+REPO = "ifesserra-lab/dgp.cnqp_lib"
 BACKLOG_PATH = "docs/backlog.md"
 GH_TOKEN = os.getenv("GH_TOKEN")
 
@@ -45,7 +45,7 @@ def update_backlog(issues):
     # Filter out Pull Requests (GitHub API returns PRs in the issues endpoint)
     only_issues = [i for i in issues if "pull_request" not in i]
     
-    header = f"""# Project Backlog - ResearchDomain
+    header = f"""# Project Backlog - DGP CNPq Library
 
 This document is automatically synchronized with GitHub Issues. Last updated: {now}
 
