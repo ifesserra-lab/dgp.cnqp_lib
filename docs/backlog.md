@@ -359,3 +359,11 @@ Technical Proposal for Release v0.2.0 Preparation.
 
 
 ---
+
+---
+
+## 🚀 Releases
+
+### v0.1.1
+- **PR**: [#38](https://github.com/ifesserra-lab/dgp.cnqp_lib/pull/38)
+- **Description**: Fix extraction logic and normalize date fields.
