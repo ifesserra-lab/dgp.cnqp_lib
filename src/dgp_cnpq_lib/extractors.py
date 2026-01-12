@@ -165,10 +165,11 @@ class FieldsetParser(BaseExtractor):
 
             if first_key:
                 # Check if it's an "Egresso" table
-                # Active researchers have 'titulacao_maxima'
-                # Egressos have 'data_fim' (from 'periodo') and NO 'titulacao_maxima'
+                # Active members have 'titulacao_maxima' (Pesquisadores) or 'nivel_de_treinamento' (Estudantes)
+                # Egressos have 'data_fim' (from 'periodo') and NO active indicators
                 keys = rows[0].keys()
-                if "data_fim" in keys and "titulacao_maxima" not in keys:
+                is_active = "titulacao_maxima" in keys or "nivel_de_treinamento" in keys
+                if "data_fim" in keys and not is_active:
                     first_key = f"egressos_{first_key}"
 
             if legend and "recursos humanos" in legend.lower() and first_key:
