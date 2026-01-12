@@ -1,12 +1,13 @@
 # Project Backlog - DGP CNPq Library
 
-This document is automatically synchronized with GitHub Issues. Last updated: 2026-01-12 19:23:15
+This document is automatically synchronized with GitHub Issues. Last updated: 2026-01-12 19:40:35
 
 ## 📋 Master Issue List
 Overview of all demands, their states and executors.
 
 | # | Status | Title | Executor | Sprint | Milestone |
 | :--- | :--- | :--- | :--- | :--- | :--- |
+| [# 42](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/42) | 🟢 | task: Sync version to 0.5.0 | - | - | - |
 | [# 37](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/37) | ✅ | Normalize researcher date fields to data_inicio and data_fim | - | - | - |
 | [# 32](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/32) | ✅ | Update Agile Standards: CI/CD Monitoring Enforcement | - | - | - |
 | [# 29](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/29) | ✅ | fix: project-wide code style compliance | - | - | - |
@@ -30,7 +31,7 @@ Overview of all demands, their states and executors.
 ## 📂 Workflow States
 
 ### 🟢 In Progress / Todo
-_No issues in this state._
+- [#42](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/42) **task: Sync version to 0.5.0**
 
 ### ✅ Done / Released
 - [#37](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/37) **Normalize researcher date fields to data_inicio and data_fim**
@@ -54,6 +55,25 @@ _No issues in this state._
 ---
 
 ## 📝 Detailed Backlog
+
+### [OPEN] [#42](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/42) task: Sync version to 0.5.0
+- **Executor**: -
+- **Labels**: task, maintenance
+- **Milestone**: -
+
+**Description**:
+**Objective**: Align the library version in `pyproject.toml` and documentation with the target version `0.5.0`.
+
+### Acceptance Criteria
+- [ ] Update `pyproject.toml` version to `0.5.0`.
+- [ ] Ensure `docs/backlog.md` reflects the versioning logic.
+- [ ] Pass all linting and tests.
+- [ ] Follow `@agile-standards` for branching and release.
+
+**Project**: The Band Project
+**Milestone**: v0.5.0
+
+---
 
 ### [CLOSED] [#37](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/37) Normalize researcher date fields to data_inicio and data_fim
 - **Executor**: -
@@ -359,15 +379,3 @@ Technical Proposal for Release v0.2.0 Preparation.
 
 
 ---
-
----
-
-## 🚀 Releases
-
-### v0.1.1
-- **PR**: [#38](https://github.com/ifesserra-lab/dgp.cnqp_lib/pull/38)
-- **Description**: Fix extraction logic and normalize date fields.
-
-### v0.1.2
-- **PR**: [#41](https://github.com/ifesserra-lab/dgp.cnqp_lib/pull/41)
-- **Description**: Fix misclassification of active students as egressos.
