@@ -1,13 +1,13 @@
 # Project Backlog - DGP CNPq Library
 
-This document is automatically synchronized with GitHub Issues. Last updated: 2026-01-12 19:20:32
+This document is automatically synchronized with GitHub Issues. Last updated: 2026-01-12 19:23:15
 
 ## 📋 Master Issue List
 Overview of all demands, their states and executors.
 
 | # | Status | Title | Executor | Sprint | Milestone |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| [# 37](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/37) | 🟢 | Normalize researcher date fields to data_inicio and data_fim | - | - | - |
+| [# 37](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/37) | ✅ | Normalize researcher date fields to data_inicio and data_fim | - | - | - |
 | [# 32](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/32) | ✅ | Update Agile Standards: CI/CD Monitoring Enforcement | - | - | - |
 | [# 29](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/29) | ✅ | fix: project-wide code style compliance | - | - | - |
 | [# 27](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/27) | ✅ | fix: isort error in __main__.py | - | - | - |
@@ -30,9 +30,10 @@ Overview of all demands, their states and executors.
 ## 📂 Workflow States
 
 ### 🟢 In Progress / Todo
-- [#37](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/37) **Normalize researcher date fields to data_inicio and data_fim**
+_No issues in this state._
 
 ### ✅ Done / Released
+- [#37](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/37) **Normalize researcher date fields to data_inicio and data_fim**
 - [#32](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/32) **Update Agile Standards: CI/CD Monitoring Enforcement**
 - [#29](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/29) **fix: project-wide code style compliance**
 - [#27](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/27) **fix: isort error in __main__.py**
@@ -54,18 +55,21 @@ Overview of all demands, their states and executors.
 
 ## 📝 Detailed Backlog
 
-### [OPEN] [#37](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/37) Normalize researcher date fields to data_inicio and data_fim
+### [CLOSED] [#37](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/37) Normalize researcher date fields to data_inicio and data_fim
 - **Executor**: -
 - **Labels**: enhancement, refactor
 - **Milestone**: -
 
 **Description**:
-Normalize `data_inclusao` to `data_inicio` for active researchers and ensure `data_fim` is present (empty or None) for consistency with Egressos data.
+Successfully normalized date fields.
 
-**Requirements:**
-- Rename `data_inclusao` to `data_inicio`.
-- Ensure `data_fim` exists for all researcher records (active and alumni).
-- Maintain existing parsing logic for "Período de participação".
+**Changes:**
+- Active members now have `data_inicio` (mapped from `data_inclusao`) and `data_fim` (empty).
+- Egressos maintain `data_inicio` and `data_fim`.
+- Fixed classification logic to distinguish Active vs Egressos based on `titulacao_maxima`.
+
+**Verification:**
+- Verified `cnpq.json` output for both Active and Egressos.
 
 ---
 
