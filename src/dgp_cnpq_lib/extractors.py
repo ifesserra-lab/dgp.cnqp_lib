@@ -89,11 +89,11 @@ class TableExtractor(BaseExtractor):
                 cleaned_row["data_fim"] = ""
             else:
                 cleaned_row[k] = val
-                
+
         # Post-cleanup: Ensure data_fim exists if data_inicio exists
         if "data_inicio" in cleaned_row and "data_fim" not in cleaned_row:
-             cleaned_row["data_fim"] = ""
-             
+            cleaned_row["data_fim"] = ""
+
         return cleaned_row
 
 
@@ -143,9 +143,7 @@ class FieldsetParser(BaseExtractor):
         for t in all_tables:
             # IMPORTANT: Ensure the table belongs to THIS fieldset and not a nested one
             # compare the closest fieldset of the table with the current fieldset
-            is_owned = fieldset.evaluate(
-                "(fs, t) => t.closest('fieldset') === fs", t
-            )
+            is_owned = fieldset.evaluate("(fs, t) => t.closest('fieldset') === fs", t)
             if is_owned:
                 tables.append(t)
 
@@ -165,7 +163,8 @@ class FieldsetParser(BaseExtractor):
 
             if first_key:
                 # Check if it's an "Egresso" table
-                # Active members have 'titulacao_maxima' (Pesquisadores) or 'nivel_de_treinamento' (Estudantes)
+                # Active members have 'titulacao_maxima' (Pesquisadores)
+                # or 'nivel_de_treinamento' (Estudantes)
                 # Egressos have 'data_fim' (from 'periodo') and NO active indicators
                 keys = rows[0].keys()
                 is_active = "titulacao_maxima" in keys or "nivel_de_treinamento" in keys

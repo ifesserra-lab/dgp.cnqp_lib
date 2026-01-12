@@ -34,6 +34,7 @@ Overview of all demands, their states and executors.
 - [#42](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/42) **task: Sync version to 0.5.0**
 
 ### ✅ Done / Released
+- [#42](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/42) **task: Sync version to 0.5.0**
 - [#37](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/37) **Normalize researcher date fields to data_inicio and data_fim**
 - [#32](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/32) **Update Agile Standards: CI/CD Monitoring Enforcement**
 - [#29](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/29) **fix: project-wide code style compliance**
@@ -56,7 +57,7 @@ Overview of all demands, their states and executors.
 
 ## 📝 Detailed Backlog
 
-### [OPEN] [#42](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/42) task: Sync version to 0.5.0
+### [CLOSED] [#42](https://github.com/ifesserra-lab/dgp.cnqp_lib/issues/42) task: Sync version to 0.5.0
 - **Executor**: -
 - **Labels**: task, maintenance
 - **Milestone**: -
@@ -65,10 +66,10 @@ Overview of all demands, their states and executors.
 **Objective**: Align the library version in `pyproject.toml` and documentation with the target version `0.5.0`.
 
 ### Acceptance Criteria
-- [ ] Update `pyproject.toml` version to `0.5.0`.
-- [ ] Ensure `docs/backlog.md` reflects the versioning logic.
-- [ ] Pass all linting and tests.
-- [ ] Follow `@agile-standards` for branching and release.
+- [x] Update `pyproject.toml` version to `0.5.0`.
+- [x] Ensure `docs/backlog.md` reflects the versioning logic.
+- [x] Pass all linting and tests.
+- [x] Follow `@agile-standards` for branching and release.
 
 **Project**: The Band Project
 **Milestone**: v0.5.0
@@ -379,3 +380,13 @@ Technical Proposal for Release v0.2.0 Preparation.
 
 
 ---
+
+## 🚀 Releases
+
+### v0.1.1
+- **PR**: [#38](https://github.com/ifesserra-lab/dgp.cnqp_lib/pull/38)
+- **Description**: Fix extraction logic and normalize date fields.
+
+### v0.5.0
+- **PR**: [#43](https://github.com/ifesserra-lab/dgp.cnqp_lib/pull/43)
+- **Description**: Sync project version to 0.5.0.
