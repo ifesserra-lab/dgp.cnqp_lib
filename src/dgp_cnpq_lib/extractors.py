@@ -80,8 +80,20 @@ class TableExtractor(BaseExtractor):
                     cleaned_row["data_fim"] = match.group(2)
                 else:
                     cleaned_row[k] = val
+                    if "data_inicio" not in cleaned_row:
+                        cleaned_row["data_inicio"] = val  # Fallback
+                    cleaned_row["data_fim"] = ""
+
+            elif k == "data_inclusao":
+                cleaned_row["data_inicio"] = val
+                cleaned_row["data_fim"] = ""
             else:
                 cleaned_row[k] = val
+                
+        # Post-cleanup: Ensure data_fim exists if data_inicio exists
+        if "data_inicio" in cleaned_row and "data_fim" not in cleaned_row:
+             cleaned_row["data_fim"] = ""
+             
         return cleaned_row
 
 
@@ -123,7 +135,20 @@ class FieldsetParser(BaseExtractor):
                 data[key] = self.clean_value(val_text)
 
     def _extract_tables(self, fieldset: ElementHandle, legend: str, data: Dict[str, Any]):
-        tables = fieldset.query_selector_all("table")
+        all_tables = fieldset.query_selector_all("table")
+        if not all_tables:
+            return
+
+        tables = []
+        for t in all_tables:
+            # IMPORTANT: Ensure the table belongs to THIS fieldset and not a nested one
+            # compare the closest fieldset of the table with the current fieldset
+            is_owned = fieldset.evaluate(
+                "(fs, t) => t.closest('fieldset') === fs", t
+            )
+            if is_owned:
+                tables.append(t)
+
         if not tables:
             return
 
@@ -137,6 +162,14 @@ class FieldsetParser(BaseExtractor):
 
             # Try to infer a key from the first key of the first row
             first_key = list(rows[0].keys())[0] if rows and rows[0] else None
+
+            if first_key:
+                # Check if it's an "Egresso" table
+                # Active researchers have 'titulacao_maxima'
+                # Egressos have 'data_fim' (from 'periodo') and NO 'titulacao_maxima'
+                keys = rows[0].keys()
+                if "data_fim" in keys and "titulacao_maxima" not in keys:
+                    first_key = f"egressos_{first_key}"
 
             if legend and "recursos humanos" in legend.lower() and first_key:
                 extracted_tables[first_key] = rows
