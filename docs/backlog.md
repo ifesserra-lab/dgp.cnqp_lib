@@ -347,6 +347,6 @@ Technical Proposal for Release v0.2.0 Preparation.
 - **PR**: [#38](https://github.com/ifesserra-lab/dgp.cnqp_lib/pull/38)
 - **Description**: Fix extraction logic and normalize date fields.
 
-### v0.1.2
-- **PR**: [#41](https://github.com/ifesserra-lab/dgp.cnqp_lib/pull/41)
-- **Description**: Fix misclassification of active students as egressos.
+### v0.5.0
+- **PR**: [#43](https://github.com/ifesserra-lab/dgp.cnqp_lib/pull/43)
+- **Description**: Sync project version to 0.5.0.

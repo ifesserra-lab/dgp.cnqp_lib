@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "dgp_cnpq_lib"
-version = "0.1.0"
+version = "0.5.0"
 description = "Biblioteca Python para extração de dados do Espelho de Grupos de Pesquisa do CNPq"
 authors = [{ name = "PaulosJunior", email = "paulossjunior@gmail.com" }]
 readme = "README.md"
